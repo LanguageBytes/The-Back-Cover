@@ -4,7 +4,7 @@
 ## User Story
 ```
 AS A book enthusiast,
-I WANT to be able to have a hub that I can explore, discuss books and see what others are reading,
+I WANT to be able to have a hub within which I can explore, discuss books and see what others are reading,
 
 WHEN I click on the homepage,
 THEN I am presented with an option to sign in or sign up and am presented with a list of top picks or authors
