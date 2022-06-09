@@ -1,24 +1,19 @@
 {
-  "name": "the-back-cover",
-  "version": "1.0.0",
-  "description": "```\r AS A book enthusiast,\r I WANT to be able to have a hub within which I can explore, discuss books and see what others are reading.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LanguageBytes/The-Back-Cover.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/LanguageBytes/The-Back-Cover/issues"
-  },
-  "homepage": "https://github.com/LanguageBytes/The-Back-Cover#readme",
-  "dependencies": {
-    "apollo-server-express": "^3.8.2",
-    "express": "^4.18.1"
+    "name": "the-back-cover",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server/server.js",
+    "scripts": {
+      "start": "node server/server.js",
+      "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+      "install": "cd server && npm i && cd ../client && npm i",
+      "seed": "cd server && npm run seed",
+      "build": "cd client && npm run build"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "concurrently": "^5.1.0"
+    }
   }
-}
