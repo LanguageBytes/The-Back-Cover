@@ -8,7 +8,9 @@ const client = new ApolloClient({
 
 function App() {
   return (
-
+    <ApolloProvider client={client}>
+      <h1>hello</h1>
+    </ApolloProvider>
   );
 }
 
