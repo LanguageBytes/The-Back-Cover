@@ -1,0 +1,20 @@
+{
+  "name": "the-back-cover",
+  "version": "1.0.0",
+  "description": "```\r AS A book enthusiast,\r I WANT to be able to have a hub within which I can explore, discuss books and see what others are reading.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LanguageBytes/The-Back-Cover.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LanguageBytes/The-Back-Cover/issues"
+  },
+  "homepage": "https://github.com/LanguageBytes/The-Back-Cover#readme"
+}
