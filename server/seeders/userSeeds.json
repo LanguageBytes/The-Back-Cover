@@ -1,51 +1,51 @@
 [
   {
-    "username": "Jade Johnson",
+    "userName": "Jade Johnson",
     "email": "jjohnson@hotmail.com",
     "password": "password01"
   },
   {
-    "username": "Brian Mknight",
+    "userName": "Brian Mknight",
     "email": "bmknight@hotmail.co.uk",
     "password": "password02"
   },
   {
-    "username": "mike Jackson",
+    "userName": "mike Jackson",
     "email": "mjackson@gmail.com",
     "password": "password03"
   },
   {
-    "username": "Mariam Hussain",
+    "userName": "Mariam Hussain",
     "email": "mariamh@gmail.com",
     "password": "password04"
   },
   {
-    "username": "Ahmed Ahmed",
+    "userName": "Ahmed Ahmed",
     "email": "ahmeda55@hotmail.com",
     "password": "password05"
   },
   {
-    "username": "Mickael Thomas",
+    "userName": "Mickael Thomas",
     "email": "mickael606@aol.com",
     "password": "password06"
   },
   {
-    "username": "Mia Ling",
+    "userName": "Mia Ling",
     "email": "mialing@hotmail.co.uk",
     "password": "password07"
   },
   {
-    "username": "David Davido",
+    "userName": "David Davido",
     "email": "davido-d@gmail.com",
     "password": "password08"
   },
   {
-    "username": "Pete Peterson",
+    "userName": "Pete Peterson",
     "email": "pete-p@gmail.com",
     "password": "password09"
   },
   {
-    "username": "Naledi Eze",
+    "userName": "Naledi Eze",
     "email": "Naledi_eze@hotmail.co.uk",
     "password": "password10"
   }

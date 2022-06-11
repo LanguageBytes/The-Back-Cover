@@ -15,11 +15,11 @@ const resolvers = {
     users: async () => {
       return User.find().populate('books');
     },
-    user: async (parent, { username }) => {
-      return User.findOne({ username }).populate('books');
+    user: async (parent, { userName }) => {
+      return User.findOne({ userName }).populate('books');
     },
-    books: async (parent, { username }) => {
-      const params = username ? { username } : {};
+    books: async (parent, { userName }) => {
+      const params = userName ? { userName } : {};
       return Book.find(params).sort({ createdAt: -1 });
     },
     book: async (parent, { bookId }) => {
@@ -28,8 +28,8 @@ const resolvers = {
   },
 
   Mutation: {
-    addUser: async (parent, { username, email, password }) => {
-      const user = await User.create({ username, email, password });
+    addUser: async (parent, { userName, email, password }) => {
+      const user = await User.create({ userName, email, password });
       const token = signToken(user);
       return { token, user };
     },
@@ -54,7 +54,7 @@ const resolvers = {
       const book = await Book.create({ bookText, bookAuthor });
 
       await User.findOneAndUpdate(
-        { username: bookAuthor },
+        { userName: bookAuthor },
         { $addToSet: { books: book._id } }
       );
 

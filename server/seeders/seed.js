@@ -13,7 +13,7 @@ db.once('open', async () => {
     for (let i = 0; i < bookSeeds.length; i++) {
       const { _id, bookAuthor } = await Book.create(bookSeeds[i]);
       const user = await User.findOneAndUpdate(
-        { username: bookAuthor },
+        { userName: bookAuthor },
         {
           $addToSet: {
             books: _id,
