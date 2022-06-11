@@ -1,5 +1,11 @@
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import './App.css';
+import axios from "axios"
+
+// Google Books API calls
+const getBooksByTitle = 'https://www.googleapis.com/books/v1/volumes?q=search+intitle&key=AIzaSyDgmjmghFQvvxLztdDeOKE0eqkG_HgdV84'
+const getBooksByAuthor = 'https://www.googleapis.com/books/v1/volumes?q=search+intitle&key=AIzaSyDgmjmghFQvvxLztdDeOKE0eqkG_HgdV84'
+
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -13,5 +19,6 @@ function App() {
     </ApolloProvider>
   );
 }
+
 
 export default App;
