@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import './App.css';
-import axios from "axios"
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Home from './pages/Home';
+import Landing from './pages/Landing';
+import Nav from './components/Nav/index';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
@@ -38,19 +39,24 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
+        <Nav />
             {/* <Nav /> */}
             <Routes>
-              <Route 
+            <Route 
                 path="/" 
-                element={<Home />} 
+                element={<Landing />} 
+              />
+              <Route 
+                path="/signup" 
+                element={<Signup />} 
               />
               <Route 
                 path="/login" 
                 element={<Login />} 
               />
               <Route 
-                path="/signup" 
-                element={<Signup />} 
+                path="/home" 
+                element={<Home />} 
               />
               {/* <Route 
                 path="/success" 
