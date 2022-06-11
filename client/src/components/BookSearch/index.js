@@ -2,14 +2,14 @@ import React, {useState} from 'react';
 import './style.css';
 import axios from "axios"
 
-// Google Books API calls
-const getBooksByAuthor = 'https://www.googleapis.com/books/v1/volumes?q=prideandprejudice+intitle&key=AIzaSyDgmjmghFQvvxLztdDeOKE0eqkG_HgdV84'
+// // Google Books API calls
+// const getBooksByAuthor = 'https://www.googleapis.com/books/v1/volumes?q=prideandprejudice+intitle&key=AIzaSyDgmjmghFQvvxLztdDeOKE0eqkG_HgdV84'
 
 function BookSearch() {
 
 const [book, setBook] = useState("");
 const [result, setResult] = useState([]);
-const [apiKey, setApiKey] = useState("AIzaSyDgmjmghFQvvxLztdDeOKE0eqkG_HgdV84");
+const [apiKey] = useState("AIzaSyDgmjmghFQvvxLztdDeOKE0eqkG_HgdV84");
 
 function changeHandler(event){
 
