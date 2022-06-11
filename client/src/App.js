@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import './App.css';
 import axios from "axios"
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 // WE NEED TO ADD APOLLO BACK AFTER TEST!! :) import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
 // Google Books API calls
