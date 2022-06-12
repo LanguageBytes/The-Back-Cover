@@ -9,6 +9,8 @@ import Signup from './pages/Signup';
 import Home from './pages/Home';
 import Landing from './pages/Landing';
 import Contact from './pages/Contact';
+import Community from './pages/Community';
+import MyBooks from './pages/MyBooks';
 import Nav from './components/Nav/index';
 
 // Google Books API calls
@@ -55,6 +57,15 @@ function App() {
               <Route 
                 path="/login" 
                 element={<Login />} 
+              />
+
+               <Route 
+                path="/community" 
+                element={<Community />} 
+              />
+              <Route 
+                path="/mybooks" 
+                element={<MyBooks />} 
               />
               <Route 
                 path="/home" 
