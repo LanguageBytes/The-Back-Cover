@@ -13,7 +13,11 @@ function Nav() {
               Discover
             </Link>
           </li>
-
+          
+          <li c>
+            Hello {Auth.getProfile().data.userName}
+          </li>
+        
           <li c>
             <Link to="/mybooks">
               My Books

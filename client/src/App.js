@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Home from './pages/Home';
 import Landing from './pages/Landing';
+import Contact from './pages/Contact';
 import Nav from './components/Nav/index';
 
 // Google Books API calls
@@ -58,6 +59,10 @@ function App() {
               <Route 
                 path="/home" 
                 element={<Home />} 
+              />
+                 <Route 
+                path="/contact" 
+                element={<Contact />} 
               />
               {/* <Route 
                 path="/success" 
