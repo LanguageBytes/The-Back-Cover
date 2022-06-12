@@ -10,7 +10,25 @@ function Nav() {
         <ul >
           <li c>
             <Link to="/home">
-              Order History
+              Discover
+            </Link>
+          </li>
+
+          <li c>
+            <Link to="/mybooks">
+              My Books
+            </Link>
+          </li>
+
+          <li c>
+            <Link to="/community">
+              Community
+            </Link>
+          </li>
+
+          <li c>
+            <Link to="/contact">
+              Contact 
             </Link>
           </li>
           <li >
@@ -43,7 +61,7 @@ function Nav() {
     <header>
       <h1>
         <Link to="/">
-        The back cover
+        The Back Cover
         </Link>
       </h1>
 
