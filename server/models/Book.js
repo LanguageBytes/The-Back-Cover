@@ -2,22 +2,13 @@ const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
 const bookSchema = new Schema({
-  bookText: {
-    type: String,
-    required: 'You need to leave a book!',
-    minlength: 1,
-    maxlength: 280,
-    trim: true,
-  },
-  bookAuthor: {
+  bookTitle: {
     type: String,
     required: true,
-    trim: true,
   },
-  createdAt: {
-    type: Date,
-    default: Date.now,
-    get: (timestamp) => dateFormat(timestamp),
+  bookCover: {
+    type: String,
+    required: true,
   },
   comments: [
     {
