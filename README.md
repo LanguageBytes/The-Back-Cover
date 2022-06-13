@@ -1,6 +1,21 @@
 # The Back Cover
 
 
+## Description
+
+An application tailored to bookworms.
+
+## Technology 
+
+- React
+- Javascript 
+- Concurrently
+- Bcrypt
+- GraphQL
+- Apollo Server
+- Axios
+- Google Books API
+
 ## User Story
 ```
 AS A book enthusiast,
@@ -23,6 +38,18 @@ THEN  I am able to view the posts of other users.
 
 ```
 
+## Challenges
+
+- Connecting the API to make individual book covers (Creating favourites function)
+- Proxy errors, npm errors and issues with node updates 
+
+## Successes
+
+- Teamwork
+- Finding an API that works
+- User able to sign up and log in
+
+## Future Developments
 
 Reference
 
