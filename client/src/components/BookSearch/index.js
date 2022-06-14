@@ -46,7 +46,7 @@ function submitHandler(event){
      {result.map(book =>
      <>
       <img src = {book.volumeInfo.imageLinks.thumbnail} alt ={book.title}/>
-      <button data-bookId={book.id} data-bookCover={book.volumeInfo.imageLinks.thumbnail}> Favourite </button>
+      <button data-bookTitle={book.id} data-bookCover={book.volumeInfo.imageLinks.thumbnail}> Favourite </button>
      </>
      )}
       </div>

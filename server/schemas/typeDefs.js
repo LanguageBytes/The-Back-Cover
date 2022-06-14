@@ -12,7 +12,7 @@ type User {
 
 type Book {
     _id: ID
-    bookTitle: String
+    bookTitle: String!
     bookCover: String!
 }
 
