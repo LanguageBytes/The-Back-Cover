@@ -3,7 +3,7 @@ import React from "react";
 const Community = () => {
     return (
       <div>
-        <p>letsbfriendstho</p>
+        <p> Contact</p>
 
       </div>
     );

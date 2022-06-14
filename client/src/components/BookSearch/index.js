@@ -11,12 +11,13 @@ const [book, setBook] = useState("");
 const [result, setResult] = useState([]);
 const [apiKey] = useState("AIzaSyDgmjmghFQvvxLztdDeOKE0eqkG_HgdV84");
 
+
 function changeHandler(event){
 
   const book = event.target.value;
-
   setBook(book);
 }
+
 
 function submitHandler(event){
   event.preventDefault();
@@ -27,6 +28,7 @@ function submitHandler(event){
     setResult(data.data.items)
   })
 }
+
 
 
   return (
@@ -42,11 +44,16 @@ function submitHandler(event){
      </form>
 
      {result.map(book =>
-      <img src = {book.volumeInfo.imageLinks.thumbnail} alt ={book.title}
-      />
+     <>
+      <img src = {book.volumeInfo.imageLinks.thumbnail} alt ={book.title}/>
+      <button data-bookId={book.id} data-bookCover={book.volumeInfo.imageLinks.thumbnail}> Favourite </button>
+     </>
      )}
       </div>
   );
 }
+
+
+
 
 export default BookSearch

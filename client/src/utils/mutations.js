@@ -29,3 +29,18 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+
+
+// export const ADD_BOOK = gql`
+//   mutation addBook(
+//     $bookId: String!
+//     $bookCover: String!
+//   )  {
+//       token
+//       user {
+//         _id
+//       }
+//     }
+//   }
+// `;
