@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import './style.css';
 import axios from "axios"
+import Favourites from "../Favourites"
+
 
 // // Google Books API calls
 // const getBooksByAuthor = 'https://www.googleapis.com/books/v1/volumes?q=prideandprejudice+intitle&key=AIzaSyDgmjmghFQvvxLztdDeOKE0eqkG_HgdV84'
@@ -29,8 +31,6 @@ function submitHandler(event){
   })
 }
 
-
-
   return (
 
    <div>
@@ -49,9 +49,10 @@ function submitHandler(event){
       <button data-bookTitle={book.id} data-bookCover={book.volumeInfo.imageLinks.thumbnail}> Favourite </button>
      </>
      )}
-      </div>
+      </div> 
   );
-}
+
+     }
 
 
 
