@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import './style.css';
 import axios from "axios"
-import Favourites from "../Favourites"
 import { Center, Container, FormControl } from '@chakra-ui/react'
 import {Heading} from  '@chakra-ui/react'
 import {Input} from  '@chakra-ui/react'
@@ -9,37 +8,51 @@ import {Button} from  '@chakra-ui/react'
 import { Grid, GridItem } from '@chakra-ui/react'
 import {Box} from '@chakra-ui/react'
 import { Flex, Spacer } from '@chakra-ui/react'
-
-
-// // Google Books API calls
-// const getBooksByAuthor = 'https://www.googleapis.com/books/v1/volumes?q=prideandprejudice+intitle&key=AIzaSyDgmjmghFQvvxLztdDeOKE0eqkG_HgdV84'
-
+import { useMutation } from '@apollo/client';
+import { ADD_BOOK } from '../../utils/mutations';
 function BookSearch() {
-
 const [book, setBook] = useState("");
+const [buttonState, setButtonState] = useState({ bookCover: '' });
+const [addBook] = useMutation(ADD_BOOK);
 const [result, setResult] = useState([]);
 const [apiKey] = useState("AIzaSyDgmjmghFQvvxLztdDeOKE0eqkG_HgdV84");
-
-
+// For the Favourite Button
+const handleButtonClick= async (event) => {
+  event.preventDefault();
+  try {
+  const mutationResponse = await addBook({
+    variables: {
+      bookCover: buttonState.bookCover,
+    },
+  });
+    console.log(setButtonState)
+    console.log(mutationResponse)
+  } catch (err) {
+    console.error(err);
+  }
+};
+const handleChange = (event) => {
+  const { name, value } = event.target;
+  setButtonState({
+    ...buttonState,
+    [name]: value,
+  });
+  console.log(buttonState)
+};
+// For the API call
 function changeHandler(event){
-
   const book = event.target.value;
   setBook(book);
 }
-
-
 function submitHandler(event){
   event.preventDefault();
-
   axios.get("https://www.googleapis.com/books/v1/volumes?q=" + book + "&maxResult=10" + "&key=" + apiKey)
   .then(data =>  {
     console.log(data.data.items)
     setResult(data.data.items)
   })
 }
-
   return (
-
    <Container>
       <Grid h='200px'
             templateColumns='repeat(3, 1fr)'
@@ -58,18 +71,16 @@ function submitHandler(event){
      {result.map(book =>
       <GridItem w='100%' colSpan={1} >
       <img src = {book.volumeInfo.imageLinks.thumbnail} alt ={book.title}/>
-      <Button> 
-      <button data-bookTitle={book.id} data-bookCover={book.volumeInfo.imageLinks.thumbnail}>Favourite</button> </Button>
+      <Button>
+      <button onChange={handleChange} onClick={handleButtonClick} bookCover={book.volumeInfo.imageLinks.thumbnail}> Favourite</button> </Button>
       </GridItem>
      )}
      </GridItem>
      </Grid>
-      </Container> 
+      </Container>
   );
 
      }
-
-
 
 
 export default BookSearch
