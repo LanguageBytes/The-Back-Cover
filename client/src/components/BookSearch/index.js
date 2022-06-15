@@ -57,12 +57,12 @@ function submitHandler(event){
      </GridItem>
      <GridItem rowSpan={4} colSpan={2}>
      {result.map(book =>
-     <Flex>
-      <Box flex='1'>
+     <Grid templateColumns='repeat(5, 1fr)'>
+      <GridItem rowSpan={5}>
       <img src = {book.volumeInfo.imageLinks.thumbnail} alt ={book.title}/>
       <Button data-bookTitle={book.id} data-bookCover={book.volumeInfo.imageLinks.thumbnail}> Favourite </Button>
-      </Box>
-     </Flex>
+      </GridItem>
+     </Grid>
      )}
      </GridItem>
      </Grid>
