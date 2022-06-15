@@ -43,10 +43,10 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div>
+        <div className="apollo">
         <Nav />
             {/* <Nav /> */}
-            <Box bg='orange.50' >
+            <Box> 
             <Routes>
             <Route 
                 path="/" 

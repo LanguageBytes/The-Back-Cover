@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.apollo {
+  background: rgb(109,135,137);
+background: linear-gradient(90deg, rgba(109,135,137,1) 0%, rgba(253,233,223,1) 38%, rgba(91,100,144,1) 100%);
+  height: auto;
+width: 100%;
+padding-bottom:5;
+}

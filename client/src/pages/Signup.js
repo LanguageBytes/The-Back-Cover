@@ -47,7 +47,7 @@ function Signup(props) {
       <Link  className="go-back-login" fontWeight="normal" p='4' to="/login">
         <Text p='4' fontSize='20px' >← Go to Login</Text></Link>
       <Center boxShadow='dark-lg' className="form-background" p='4' my='4'>
-      <FormControl>
+      <FormControl p='3'>
       <Heading fontWeight="light" className="form-heading" py='2' fontSize='30px'>Sign Up</Heading>
      <form onSubmit={handleFormSubmit}> 
         <div>
