@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import './style.css';
 import axios from "axios"
-import Favourites from "../Favourites"
 import { Center, Container, FormControl } from '@chakra-ui/react'
 import {Heading} from  '@chakra-ui/react'
 import {Input} from  '@chakra-ui/react'
@@ -9,6 +8,8 @@ import {Button} from  '@chakra-ui/react'
 import { Grid, GridItem } from '@chakra-ui/react'
 import {Box} from '@chakra-ui/react'
 import { Flex, Spacer } from '@chakra-ui/react'
+import { useMutation } from '@apollo/client';
+import { ADD_BOOK } from '../../utils/mutations';
 
 function BookSearch() {
 
@@ -25,7 +26,7 @@ const handleButtonClick= async (event) => {
   try {
   const mutationResponse = await addBook({
     variables: {
-      bookCover: buttonState.data-bookCover,
+      bookCover: buttonState.bookCover,
     },
   });
     console.log(setButtonState)
@@ -84,7 +85,7 @@ function submitHandler(event){
       <GridItem w='100%' colSpan={1} >
       <img src = {book.volumeInfo.imageLinks.thumbnail} alt ={book.title}/>
       <Button> 
-      <button onChange={handleChange} onClick={handleButtonClick} data-bookCover={book.volumeInfo.imageLinks.thumbnail}> Favourite</button> </Button>
+      <button onChange={handleChange} onClick={handleButtonClick} bookCover={book.volumeInfo.imageLinks.thumbnail}> Favourite</button> </Button>
       </GridItem>
      )}
      </GridItem>

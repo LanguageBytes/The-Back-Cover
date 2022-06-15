@@ -15,13 +15,11 @@ import {GiRead} from 'react-icons/gi'
 import { Text } from '@chakra-ui/react'
 import './Nav.css'
 function Nav() {
-
-  // const colors = useColorModeValue(
-  //   ['green.50', 'teal.50', 'blue.50','purple.50','pink.50','orange.50'],
-  // )
-  // const [tabIndex, setTabIndex] = React.useState(0)
-  // const bg = colors[tabIndex]
-
+  const colors = useColorModeValue(
+    ['green.50', 'teal.50', 'blue.50','purple.50','pink.50','orange.50'],
+  )
+  const [tabIndex, setTabIndex] = React.useState(0)
+  const bg = colors[tabIndex]
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
@@ -90,7 +88,6 @@ function Nav() {
       );
     }
   }
-
   return (
     <header>
       <Heading fontWeight='light' p='4' className="app-title">
@@ -100,12 +97,10 @@ function Nav() {
         </Text>
         </Link>
       </Heading>
-
       <nav>
         {showNavigation()}
       </nav>
     </header>
   );
 }
-
 export default Nav;
