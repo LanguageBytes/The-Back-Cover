@@ -45,7 +45,7 @@ function Signup(props) {
   return (
     <Container>
       <Link  className="go-back-login" p='4' to="/login">
-        <Text p='4' fontSize='20px'  fontWeight='normal'>← Go to Login</Text></Link>
+        <Text p='4' fontSize='25px'  fontWeight='normal'>← Go to Login</Text></Link>
       <Center boxShadow='dark-lg' className="form-background" p='4' my='4'>
       <FormControl p='3'>
       <Heading fontWeight="light" className="form-heading" py='2' fontSize='30px'>Sign Up</Heading>

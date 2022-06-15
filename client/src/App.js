@@ -46,7 +46,6 @@ function App() {
         <div className="apollo">
         <Nav />
             {/* <Nav /> */}
-            <Box> 
             <Routes>
             <Route 
                 path="/" 
@@ -86,7 +85,6 @@ function App() {
                 // element={<NoMatch />} 
               />
             </Routes>
-            </Box>
         </div>
       </Router>
     </ApolloProvider>
