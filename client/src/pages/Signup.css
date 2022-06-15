@@ -1,0 +1,17 @@
+.form-background {
+    background-color: rgb(150, 174, 163);
+  }
+  
+  .form-heading {
+    color:  rgb(215, 226, 221);
+  }
+  
+  .go-back-login {
+    color: rgb(150, 174, 163);
+  }
+  
+  .form-button {
+   background-color:  rgb(215, 226, 221);
+   color:rgb(150, 174, 163);;
+   
+  }

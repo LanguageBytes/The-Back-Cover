@@ -3,6 +3,19 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
+import { Text } from '@chakra-ui/react'
+import {
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText,
+  Input,
+  Container,
+  Center
+} from '@chakra-ui/react'
+import { Heading } from '@chakra-ui/react'
+import { Button, ButtonGroup } from '@chakra-ui/react'
+import './Signup.css';
 
 function Signup(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -30,15 +43,18 @@ function Signup(props) {
   };
 
   return (
-    <div>
-      <Link to="/login">← Go to Login</Link>
-
-      <h2>Signup</h2>
-      <form onSubmit={handleFormSubmit}>
+    <Container>
+      <Link  className="go-back-login" fontWeight="normal" p='4' to="/login">
+        <Text p='4' >← Go to Login</Text></Link>
+      <Center boxShadow='dark-lg' className="form-background" p='4' my='4'>
+      <FormControl>
+      <Heading fontWeight="light" className="form-heading" py='2' fontSize='30px'>SignUp</Heading>
+     <form onSubmit={handleFormSubmit}> 
         <div>
-          <label htmlFor="userName">First Name:</label>
-          <input
-            placeholder="First"
+          <FormLabel color='white' htmlFor="userName">Username:</FormLabel>
+          <Input
+            bg='red.100'
+            placeholder="Username"
             name="userName"
             type="userName"
             id="userName"
@@ -46,8 +62,9 @@ function Signup(props) {
           />
         </div>
         <div>
-          <label htmlFor="email">Email:</label>
-          <input
+          <FormLabel color='white' htmlFor="email">Email:</FormLabel>
+          <Input
+            bg='orange.100'
             placeholder="youremail@test.com"
             name="email"
             type="email"
@@ -56,8 +73,9 @@ function Signup(props) {
           />
         </div>
         <div>
-          <label htmlFor="pwd">Password:</label>
-          <input
+          <FormLabel color='white' htmlFor="pwd">Password:</FormLabel>
+          <Input
+            bg='blue.100'
             placeholder="******"
             name="password"
             type="password"
@@ -66,10 +84,12 @@ function Signup(props) {
           />
         </div>
         <div>
-          <button type="submit">Submit</button>
+          <Button mt='4' className="form-button" variant='solid' type="submit">Submit</Button>
         </div>
-      </form>
-    </div>
+       </form> 
+      </FormControl>
+      </Center>
+    </Container>
   );
 }
 
