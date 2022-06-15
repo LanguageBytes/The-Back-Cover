@@ -61,18 +61,20 @@ function Nav() {
       );
     } else {
       return (
-        <ul >
-          <li>
+        <Tabs onChange={(index) => setTabIndex(index)} bg={bg} colorScheme='white' >
+          <TabList>
+          <Tab fontSize='20px' color='#48BB78'>
             <Link to="/signup">
               Signup
             </Link>
-          </li>
-          <li>
+            </Tab>
+            <Tab fontSize='20px' color='#38B2AC'>
             <Link to="/login">
               Login
             </Link>
-          </li>
-        </ul>
+            </Tab>
+          </TabList>
+          </Tabs>
       );
     }
   }
