@@ -1,0 +1,17 @@
+.form-background {
+    background-color: hsl(183, 19%, 41%);
+  }
+  
+  .form-heading {
+    color:  rgb(215, 226, 221);
+  }
+  
+  .go-back-login {
+    color: hsl(183, 19%, 41%);
+  }
+  
+  .form-button {
+   background-color:  rgb(215, 226, 221);
+   color:hsl(183, 19%, 41%);
+   
+  }
