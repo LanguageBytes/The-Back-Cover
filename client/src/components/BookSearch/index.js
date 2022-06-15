@@ -40,13 +40,11 @@ function submitHandler(event){
   return (
 
    <Container>
-    <Center>
       <Grid h='200px'
-            templateRows='repeat(2, 1fr)'
-            templateColumns='repeat(5, 1fr)'
+            templateColumns='repeat(3, 1fr)'
             gap={4}>
-    <GridItem rowSpan={1} colSpan={2}>
-    <FormControl  p='4' my='4' boxShadow='dark-lg' className="discovery-form-background" p='3'>
+    <GridItem colSpan={1}>
+    <FormControl  p='4' my='4' boxShadow='dark-lg' className="discovery-form-background" >
     <Heading fontWeight="light" className="form-heading-discovery" py='2' fontSize='25px'>Search Books</Heading>
      <form onSubmit={submitHandler}>
          <Input bg='cyan.100' type ="text" onChange={changeHandler} placeholder="Enter a book name" autoComplete="off"></Input>
@@ -55,18 +53,18 @@ function submitHandler(event){
      </form>
      </FormControl>
      </GridItem>
-     <GridItem rowSpan={4} colSpan={2}>
+     <GridItem rowSpan={2} colSpan={2}>
      {result.map(book =>
-     <Grid templateColumns='repeat(5, 1fr)'>
-      <GridItem rowSpan={5}>
+     <Grid templateColumns="repeat(5, 1fr)" gap='2' >
+      <Box w='100%' >
       <img src = {book.volumeInfo.imageLinks.thumbnail} alt ={book.title}/>
-      <Button data-bookTitle={book.id} data-bookCover={book.volumeInfo.imageLinks.thumbnail}> Favourite </Button>
-      </GridItem>
+      <Button> 
+      <button data-bookTitle={book.id} data-bookCover={book.volumeInfo.imageLinks.thumbnail}>Favourite</button> </Button>
+      </Box>
      </Grid>
      )}
      </GridItem>
      </Grid>
-     </Center>
       </Container> 
   );
 
