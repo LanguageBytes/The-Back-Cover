@@ -47,7 +47,7 @@ function Login(props) {
         </Link>
         <Center boxShadow='dark-lg' className="form-background-login" p='4' my='4'>
         <FormControl p='3'>
-          <Heading fontWeight="light" className="form-heading" py='2' fontSize='30px'>LogIn</Heading>
+          <Heading fontWeight="light" className="form-heading" py='2' fontSize='30px'>Log In</Heading>
       <form onSubmit={handleFormSubmit}>
         <div>
           <FormLabel color='white' htmlFor="email">Email address:</FormLabel>
