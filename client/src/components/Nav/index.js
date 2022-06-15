@@ -16,11 +16,11 @@ import { Text } from '@chakra-ui/react'
 import './Nav.css'
 function Nav() {
 
-  // const colors = useColorModeValue(
-  //   ['green.50', 'teal.50', 'blue.50','purple.50','pink.50','orange.50'],
-  // )
-  // const [tabIndex, setTabIndex] = React.useState(0)
-  // const bg = colors[tabIndex]
+  const colors = useColorModeValue(
+    ['green.50', 'teal.50', 'blue.50','purple.50','pink.50','orange.50'],
+  )
+  const [tabIndex, setTabIndex] = React.useState(0)
+  const bg = colors[tabIndex]
 
   function showNavigation() {
     if (Auth.loggedIn()) {
