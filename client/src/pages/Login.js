@@ -3,6 +3,17 @@ import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
+import { Center, FormControl, Heading } from '@chakra-ui/react';
+import {
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText,
+  Input,
+  Container,
+} from '@chakra-ui/react'
+import { Button, ButtonGroup } from '@chakra-ui/react'
+import { Text } from '@chakra-ui/react'
+import './Login.css';
 
 function Login(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -30,14 +41,18 @@ function Login(props) {
   };
 
   return (
-    <div>
-      <Link to="/signup">← Go to Signup</Link>
-
-      <h2>Login</h2>
+    <Container>
+      <Link className='go-back-signup' fontWeight='normal' to="/signup">
+        <Text fontSize='20px' p='4'>← Go to Signup</Text>
+        </Link>
+        <Center boxShadow='dark-lg' className="form-background-login" p='4' my='4'>
+        <FormControl p='3'>
+          <Heading fontWeight="light" className="form-heading" py='2' fontSize='30px'>LogIn</Heading>
       <form onSubmit={handleFormSubmit}>
         <div>
-          <label htmlFor="email">Email address:</label>
-          <input
+          <FormLabel color='white' htmlFor="email">Email address:</FormLabel>
+          <Input
+            bg='green.100'
             placeholder="youremail@test.com"
             name="email"
             type="email"
@@ -46,8 +61,9 @@ function Login(props) {
           />
         </div>
         <div>
-          <label htmlFor="pwd">Password:</label>
-          <input
+          <FormLabel color='white' htmlFor="pwd">Password:</FormLabel>
+          <Input
+            bg='purple.100'
             placeholder="******"
             name="password"
             type="password"
@@ -57,14 +73,16 @@ function Login(props) {
         </div>
         {error ? (
           <div>
-            <p >The provided credentials are incorrect</p>
+            <Text fontSize='20px' p='4' fontWeight='normal' className='go-back-signup'>The provided credentials are incorrect</Text>
           </div>
         ) : null}
         <div >
-          <button type="submit">Submit</button>
+          <Button mt='4' type="submit" className="form-button-login" variant='solid'>Submit</Button>
         </div>
       </form>
-    </div>
+      </FormControl>
+      </Center>
+    </Container>
   );
 }
 
