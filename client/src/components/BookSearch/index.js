@@ -41,7 +41,7 @@ const handleButtonClick= async (event) => {
   try {
   const mutationResponse = await addBook({
     variables: {
-      bookCover: buttonState.data,
+      bookCover: buttonState.bookCover
     },
   });
     console.log(setButtonState)
@@ -51,11 +51,11 @@ const handleButtonClick= async (event) => {
   }
 };
 const handleChange = (event) => {
-  const { data, value } = event.target;
+  const { Data, value } = event.target;
 
   setButtonState({
     ...buttonState,
-    [data]: value,
+    [Data]: value,
   });
   console.log(buttonState)
 };
@@ -81,7 +81,7 @@ const handleChange = (event) => {
       <GridItem w='100%' colSpan={1} >
       <img src = {book.volumeInfo.imageLinks.thumbnail} alt ={book.title}/>
       <Button> 
-      <button id="favourite" onChange={handleChange} onClick={handleButtonClick} data={book.volumeInfo.imageLinks.thumbnail}> Favourite</button> </Button>
+      <button id="favourite" onChange={handleChange} onClick={handleButtonClick} Data={book.volumeInfo.imageLinks.thumbnail}> Favourite</button> </Button>
       </GridItem>
      )}
      </GridItem>
