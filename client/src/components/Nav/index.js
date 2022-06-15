@@ -93,9 +93,9 @@ function Nav() {
 
   return (
     <header>
-      <Heading >
+      <Heading fontWeight='light' p='4' className="app-title">
         <Link  to="/">
-        <Text fontWeight='light' p='4' className="app-title">The Back Cover
+        <Text >The Back Cover
         <Icon className="app-title" as={GiRead} w={10} h={10} />
         </Text>
         </Link>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, GridItem } from '@chakra-ui/react'
+import { Grid, GridItem, Heading } from '@chakra-ui/react'
 import { Center, Square, Circle } from '@chakra-ui/react'
 import { Container } from '@chakra-ui/react'
 import { Icon } from '@chakra-ui/react'
@@ -7,10 +7,11 @@ import { FiGithub } from 'react-icons/fi'
 import {FiLinkedin} from 'react-icons/fi'
 import {FiMail} from 'react-icons/fi'
 import { Avatar, AvatarBadge, AvatarGroup } from '@chakra-ui/react'
-
+import './Contact.css'
 const Contact = () => {
     return (
-      <Container p='10'>
+      <Container mt='4' p='10' boxShadow='dark-lg' className="contact-container">
+        <Heading fontSize='30px ' p='4' fontWeight='normal' className="contact-title" >Contact Us</Heading>
       <Center bg='orange.100'>
            <Grid templateColumns='repeat(4, 1fr)' gap={6}>
               <GridItem w='100%' p='4'>
