@@ -11,7 +11,8 @@ import {FiSearch} from 'react-icons/fi'
 import {FiBookOpen} from 'react-icons/fi'
 import {RiQuestionAnswerLine} from 'react-icons/ri'
 import {RiContactsBookLine} from 'react-icons/ri'
-
+import { Text } from '@chakra-ui/react'
+import './Nav.css'
 function Nav() {
 
   const colors = useColorModeValue(
@@ -91,11 +92,11 @@ function Nav() {
 
   return (
     <header>
-      <h1>
-        <Link to="/">
-        The Back Cover
+      <Heading >
+        <Link  to="/">
+        <Text fontWeight='light' p='4' className="app-title">The Back Cover</Text>
         </Link>
-      </h1>
+      </Heading>
 
       <nav>
         {showNavigation()}
