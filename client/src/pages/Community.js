@@ -4,7 +4,6 @@ const Community = () => {
     return (
       <div>
         <p> Contact</p>
-
       </div>
     );
   };

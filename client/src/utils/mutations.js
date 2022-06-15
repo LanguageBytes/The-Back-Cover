@@ -33,7 +33,7 @@ export const ADD_USER = gql`
 
  export const ADD_BOOK = gql` 
  mutation 
- addBook ( $bookTitle: String! $bookCover: String!) {
-  addBook ( bookTitle: $bookTitle bookCover: $bookCover )
+ addBook ( $bookCover: String!) {
+  addBook ( bookCover: $bookCover )
  }
  `;

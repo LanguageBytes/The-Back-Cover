@@ -1,19 +1,47 @@
 import React, {useState} from 'react';
 import './style.css';
 import axios from "axios"
-import Favourites from "../Favourites"
+import { useMutation } from '@apollo/client';
+import { ADD_BOOK } from '../../utils/mutations';
 
-
-// // Google Books API calls
-// const getBooksByAuthor = 'https://www.googleapis.com/books/v1/volumes?q=prideandprejudice+intitle&key=AIzaSyDgmjmghFQvvxLztdDeOKE0eqkG_HgdV84'
 
 function BookSearch() {
 
 const [book, setBook] = useState("");
+const [buttonState, setButtonState] = useState({ bookCover: '' });
+const [addBook] = useMutation(ADD_BOOK);
 const [result, setResult] = useState([]);
 const [apiKey] = useState("AIzaSyDgmjmghFQvvxLztdDeOKE0eqkG_HgdV84");
 
 
+// For the Favourite Button
+const handleButtonClick= async (event) => {
+  event.preventDefault();
+  try {
+  const mutationResponse = await addBook({
+    variables: {
+      bookCover: buttonState.bookcover,
+    },
+  });
+    console.log(setButtonState)
+    console.log(mutationResponse)
+
+  } catch (err) {
+    console.error(err);
+  }
+  
+};
+const handleChange = (event) => {
+  const { name, value } = event.target;
+
+  setButtonState({
+    ...buttonState,
+    [name]: value,
+  });
+  console.log(buttonState)
+};
+
+// For the API call
 function changeHandler(event){
 
   const book = event.target.value;
@@ -46,7 +74,7 @@ function submitHandler(event){
      {result.map(book =>
      <>
       <img src = {book.volumeInfo.imageLinks.thumbnail} alt ={book.title}/>
-      <button data-bookTitle={book.id} data-bookCover={book.volumeInfo.imageLinks.thumbnail}> Favourite </button>
+      <button name={book.volumeInfo.imageLinks.thumbnail} onClick={handleButtonClick} OnChange={handleChange} value={book.volumeInfo.imageLinks.thumbnail}> Favourite </button>
      </>
      )}
       </div> 
