@@ -11,6 +11,7 @@ import {FiSearch} from 'react-icons/fi'
 import {FiBookOpen} from 'react-icons/fi'
 import {RiQuestionAnswerLine} from 'react-icons/ri'
 import {RiContactsBookLine} from 'react-icons/ri'
+import {GiRead} from 'react-icons/gi'
 import { Text } from '@chakra-ui/react'
 import './Nav.css'
 function Nav() {
@@ -94,7 +95,9 @@ function Nav() {
     <header>
       <Heading >
         <Link  to="/">
-        <Text fontWeight='light' p='4' className="app-title">The Back Cover</Text>
+        <Text fontWeight='light' p='4' className="app-title">The Back Cover
+        <Icon className="app-title" as={GiRead} w={10} h={10} />
+        </Text>
         </Link>
       </Heading>
 
