@@ -12,6 +12,7 @@ import Contact from './pages/Contact';
 import Community from './pages/Community';
 import MyBooks from './pages/MyBooks';
 import Nav from './components/Nav/index';
+import { Box } from '@chakra-ui/react'
 
 // Google Books API calls
 // const getBooksByAuthor = 'https://www.googleapis.com/books/v1/volumes?q=prideandprejudice+intitle&key=AIzaSyDgmjmghFQvvxLztdDeOKE0eqkG_HgdV84
@@ -45,6 +46,7 @@ function App() {
         <div>
         <Nav />
             {/* <Nav /> */}
+            <Box bg='orange.50' >
             <Routes>
             <Route 
                 path="/" 
@@ -84,6 +86,7 @@ function App() {
                 // element={<NoMatch />} 
               />
             </Routes>
+            </Box>
         </div>
       </Router>
     </ApolloProvider>

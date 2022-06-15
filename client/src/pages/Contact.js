@@ -10,7 +10,7 @@ import { Avatar, AvatarBadge, AvatarGroup } from '@chakra-ui/react'
 
 const Contact = () => {
     return (
-      <Container p='y-10'>
+      <Container p='10'>
       <Center bg='orange.100'>
            <Grid templateColumns='repeat(4, 1fr)' gap={6}>
               <GridItem w='100%' p='4'>

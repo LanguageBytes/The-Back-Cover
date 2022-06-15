@@ -10,6 +10,7 @@ import { Show, Hide } from '@chakra-ui/react'
 import {FiSearch} from 'react-icons/fi'
 import {FiBookOpen} from 'react-icons/fi'
 import {RiQuestionAnswerLine} from 'react-icons/ri'
+import {RiContactsBookLine} from 'react-icons/ri'
 
 function Nav() {
 
@@ -53,7 +54,7 @@ function Nav() {
           <div c>
             <Link to="/contact">
               <Hide  below='md'>Contact </Hide>
-              <Hide above='md'><Icon color='#4299E1' as={RiQuestionAnswerLine} w={10} h={10} /></Hide>
+              <Hide above='md'><Icon color='#9F7AEA' as={RiContactsBookLine} w={10} h={10} /></Hide>
             </Link>
           </div>
           </Tab>
