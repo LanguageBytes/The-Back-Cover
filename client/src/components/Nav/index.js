@@ -5,6 +5,11 @@ import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 import { useColorModeValue } from "@chakra-ui/color-mode";
 // import { Text } from '@chakra-ui/react'
 import { Heading } from '@chakra-ui/react'
+import { Show, Hide } from '@chakra-ui/react'
+ import { Icon } from '@chakra-ui/react'
+import {FiSearch} from 'react-icons/fi'
+import {FiBookOpen} from 'react-icons/fi'
+import {RiQuestionAnswerLine} from 'react-icons/ri'
 
 function Nav() {
 
@@ -20,35 +25,39 @@ function Nav() {
         <Tabs onChange={(index) => setTabIndex(index)} bg={bg} colorScheme='white'>
           <TabList>
             <Heading color='blue.600' as='i' fontSize='30px' p='2'></Heading>
-            <Tab  fontSize='20px' color='#48BB78'>
+            <Tab  fontSize={{ base: '18px', md: '22px', lg: '28px' }} color='#48BB78'>
           <div c>
             <Link to="/home">
-              Discover
+              <Hide below='md'>Discover</Hide>
+              <Hide above='md'><Icon color='#48BB78' as={FiSearch} w={10} h={10} /></Hide>
             </Link>
           </div>
           </Tab >
-          <Tab fontSize='20px' color='#38B2AC'>
+          <Tab fontSize={{ base: '18px', md: '22px', lg: '28px' }}  color='#38B2AC'>
           <div c>
             <Link to="/mybooks">
-              My Books
+              <Hide below='md'>My Books</Hide>
+              <Hide above='md'><Icon color='#38B2AC' as={FiBookOpen} w={10} h={10} /></Hide>
             </Link>
           </div>
           </Tab >
-          <Tab fontSize='20px' color='#4299E1'>
+          <Tab fontSize={{ base: '18px', md: '22px', lg: '28px' }}  color='#4299E1'>
           <div c>
             <Link to="/community">
-              Community
+              <Hide below='md'>Community</Hide>
+              <Hide above='md'><Icon color='#4299E1' as={RiQuestionAnswerLine} w={10} h={10} /></Hide>
             </Link>
           </div>
           </Tab>
-          <Tab fontSize='20px' color='#9F7AEA'>
+          <Tab fontSize={{ base: '18px', md: '22px', lg: '28px' }}  color='#9F7AEA'>
           <div c>
             <Link to="/contact">
-              Contact 
+              <Hide  below='md'>Contact </Hide>
+              <Hide above='md'><Icon color='#4299E1' as={RiQuestionAnswerLine} w={10} h={10} /></Hide>
             </Link>
           </div>
           </Tab>
-          <Tab  fontSize='20px' color='#ED8936'>
+          <Tab  fontSize={{ base: '22px', md: '22px', lg: '28px' }}  color='#ED8936'>
           <div >
             {/* this is not using the Link component to logout or user and then refresh the application to the start */}
             <a href="/" onClick={() => Auth.logout()}>
@@ -63,12 +72,12 @@ function Nav() {
       return (
         <Tabs onChange={(index) => setTabIndex(index)} bg={bg} colorScheme='white' >
           <TabList>
-          <Tab fontSize='20px' color='#48BB78'>
+          <Tab fontSize={{ base: '22px', md: '22px', lg: '28px' }} color='#48BB78'>
             <Link to="/signup">
               Signup
             </Link>
             </Tab>
-            <Tab fontSize='20px' color='#38B2AC'>
+            <Tab fontSize={{ base: '22px', md: '22px', lg: '28px' }} color='#38B2AC'>
             <Link to="/login">
               Login
             </Link>
