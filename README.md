@@ -2,13 +2,7 @@
 
 ## Description
 
-What was your motivation?
-- 
-Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-What problem does it solve?
-What did you learn?
-What makes your project stand out?
-An application tailored to bookworms.
+In this project we created a platform to use as a virtual back cover (hence the name); where the user can track the books they want to read and see what other people think about it. Our motivation to create this application is for people who suffer from short term memory and can never remember which books had taken their fancy. We decided to focus our application around books because of our shared love of reading. How instinctively the user can utilise our site is what will make it stand out.
 
 ## Technology 
 
@@ -57,9 +51,18 @@ THEN  I am able to view the posts of other users.
 - Finding an API that works
 - User able to sign up and log in
 
+
 ## Future Developments
 
 Reference
+
+
+## Application
+
+### Deployed Application
+
+### Github Repository
+
 
 ## Contact Information
 
