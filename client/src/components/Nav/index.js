@@ -25,7 +25,6 @@ function Nav() {
       return (
         <Tabs onChange={(index) => setTabIndex(index)} bg={bg} colorScheme='white'>
           <TabList>
-            <Heading color='blue.600' as='i' fontSize='30px' p='2'></Heading>
             <Tab  fontSize={{ base: '18px', md: '22px', lg: '28px' }} color='#48BB78'>
           <div c>
             <Link to="/home">
