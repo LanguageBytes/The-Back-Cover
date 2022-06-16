@@ -41,7 +41,7 @@ const handleButtonClick= async (event) => {
   try {
   const mutationResponse = await addBook({
     data: {
-      bookcover: buttonState.Data
+      bookCover: buttonState.Data
     },
   });
     console.log(setButtonState)
@@ -80,7 +80,7 @@ const handleChange = (event) => {
      {result.map(book =>
       <GridItem w='100%' colSpan={1} >
     <img src = {book.volumeInfo.imageLinks.thumbnail} alt ={book.title}/>
-    <p>{book.volumeInfo.imageLinks.description} </p>
+    <p> </p>
       <a href={book.industryIdentifiers.infoLink}>
       <Button> 
       <button name={book.volumeInfo.imageLinks.thumbnail}> Download </button> </Button>
