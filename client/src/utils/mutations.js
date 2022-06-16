@@ -31,9 +31,19 @@ export const ADD_USER = gql`
 `;
 
 
- export const ADD_BOOK = gql` 
- mutation 
- addBook ( $bookCover: String!) {
- addBook ( bookCover: $bookCover )
- }
- `;
+export const ADD_BOOK = gql` 
+  mutation addBook(
+    $bookCover: String!
+    ) {
+      addBook (
+        bookCover: $bookCover 
+      ) {
+        bookCover
+        comments {
+          commentText
+          commentAuthor
+          createdAt
+        }
+      }
+   }
+`;
