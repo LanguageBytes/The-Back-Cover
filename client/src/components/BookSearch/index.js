@@ -127,5 +127,4 @@ function BookSearch() {
         </GridItem>
       </Grid>
     </Box>
-  );
-}
+  )};
