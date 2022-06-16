@@ -12,7 +12,7 @@ type User {
 
 type Book {
     _id: ID
-    bookCover: String!
+    bookcover: String!
 }
 
 type Comment {
@@ -32,13 +32,14 @@ type Query {
     user(userName: String!): User
     books(userName: String): [Book]
     book(bookId: ID!): Book
+    addBook (bookcover: String!): Book
     me: User
   }
 
 type Mutation {
     addUser(userName: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addBook (bookCover: String!): Book
+    addBook (bookcover: String!): Book
     addComment(
         bookId: ID!
         commentText: String!

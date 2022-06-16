@@ -11,9 +11,9 @@ import { Flex, Spacer } from '@chakra-ui/react'
 import { useMutation } from '@apollo/client';
 import { ADD_BOOK } from '../../utils/mutations';
 
-
 function BookSearch() {
 const [book, setBook] = useState("");
+const [buttonState, setButtonState] = useState({ bookCover: ''});
 const [addBook] = useMutation(ADD_BOOK);
 const [result, setResult] = useState([]);
 const [apiKey] = useState("AIzaSyDgmjmghFQvvxLztdDeOKE0eqkG_HgdV84");
@@ -28,7 +28,7 @@ function changeHandler(event){
 function submitHandler(event){
   event.preventDefault();
 
-  axios.get("https://www.googleapis.com/books/v1/volumes?q=" + book + "&maxResult=10" + "&key=" + apiKey)
+  axios.get("https://www.googleapis.com/books/v1/volumes?q=" + book + "&filter=free-ebooks" + "&maxResult=40" + "&key=" + apiKey)
   .then(data =>  {
     console.log(data.data.items)
     setResult(data.data.items)
@@ -38,16 +38,26 @@ function submitHandler(event){
 // For the Favourite Button
 const handleButtonClick= async (event) => {
   event.preventDefault();
-  console.log(event.target.dataset)
   try {
   const mutationResponse = await addBook({
     data: {
-    bookcover: event.target.dataset
+      bookcover: buttonState.Data
     },
   });
+    console.log(setButtonState)
+    console.log(mutationResponse)
   } catch (err) {
     console.error(err);
   }
+};
+const handleChange = (event) => {
+  const { name, value } = event.target;
+
+  setButtonState({
+    ...buttonState,
+    [name]: value,
+  });
+  console.log(buttonState)
 };
 
   return (
@@ -69,9 +79,13 @@ const handleButtonClick= async (event) => {
      <GridItem rowSpan={2} colSpan={2}>
      {result.map(book =>
       <GridItem w='100%' colSpan={1} >
-      <a><img src = {book.volumeInfo.imageLinks.thumbnail} alt ={book.title}/> </a>
+    <img src = {book.volumeInfo.imageLinks.thumbnail} alt ={book.title}/>
+    <p>{book.volumeInfo.imageLinks.description} </p>
+      <a href={book.industryIdentifiers.infoLink}>
       <Button> 
-      <button id="favourite" onClick={handleButtonClick} data-bookCover={book.volumeInfo.imageLinks.thumbnail}> Favourite</button> </Button>
+      <button name={book.volumeInfo.imageLinks.thumbnail}> Download </button> </Button>
+     </a>
+   
       </GridItem>
      )}
      </GridItem>
@@ -80,8 +94,3 @@ const handleButtonClick= async (event) => {
   );
 
      }
-
-
-
-
-export default BookSearch
