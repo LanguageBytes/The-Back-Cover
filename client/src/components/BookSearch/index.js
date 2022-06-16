@@ -10,38 +10,19 @@ import {Box} from '@chakra-ui/react'
 import { Flex, Spacer } from '@chakra-ui/react'
 import { useMutation } from '@apollo/client';
 import { ADD_BOOK } from '../../utils/mutations';
-
 function BookSearch() {
 const [book, setBook] = useState("");
-const [buttonState, setButtonState] = useState({ bookCover: ''});
+const [buttonState, setButtonState] = useState({ bookCover: '' });
 const [addBook] = useMutation(ADD_BOOK);
 const [result, setResult] = useState([]);
 const [apiKey] = useState("AIzaSyDgmjmghFQvvxLztdDeOKE0eqkG_HgdV84");
-
-// For the API call
-function changeHandler(event){
-
-  const book = event.target.value;
-  setBook(book);
-}
-
-function submitHandler(event){
-  event.preventDefault();
-
-  axios.get("https://www.googleapis.com/books/v1/volumes?q=" + book + "&maxResult=10" + "&key=" + apiKey)
-  .then(data =>  {
-    console.log(data.data.items)
-    setResult(data.data.items)
-  })
-}
-
 // For the Favourite Button
 const handleButtonClick= async (event) => {
   event.preventDefault();
   try {
   const mutationResponse = await addBook({
     variables: {
-      bookCover: buttonState.bookCover
+      bookCover: buttonState.bookCover,
     },
   });
     console.log(setButtonState)
@@ -51,17 +32,27 @@ const handleButtonClick= async (event) => {
   }
 };
 const handleChange = (event) => {
-  const { Data, value } = event.target;
-
+  const { name, value } = event.target;
   setButtonState({
     ...buttonState,
-    [Data]: value,
+    [name]: value,
   });
   console.log(buttonState)
 };
-
+// For the API call
+function changeHandler(event){
+  const book = event.target.value;
+  setBook(book);
+}
+function submitHandler(event){
+  event.preventDefault();
+  axios.get("https://www.googleapis.com/books/v1/volumes?q=" + book + "&maxResult=10" + "&key=" + apiKey)
+  .then(data =>  {
+    console.log(data.data.items)
+    setResult(data.data.items)
+  })
+}
   return (
-
    <Container>
       <Grid h='200px'
             templateColumns='repeat(3, 1fr)'
@@ -80,18 +71,16 @@ const handleChange = (event) => {
      {result.map(book =>
       <GridItem w='100%' colSpan={1} >
       <img src = {book.volumeInfo.imageLinks.thumbnail} alt ={book.title}/>
-      <Button> 
-      <button id="favourite" onChange={handleChange} onClick={handleButtonClick} Data={book.volumeInfo.imageLinks.thumbnail}> Favourite</button> </Button>
+      <Button>
+      <button onChange={handleChange} onClick={handleButtonClick} bookCover={book.volumeInfo.imageLinks.thumbnail}> Favourite</button> </Button>
       </GridItem>
      )}
      </GridItem>
      </Grid>
-      </Container> 
+      </Container>
   );
 
      }
-
-
 
 
 export default BookSearch
