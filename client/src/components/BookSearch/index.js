@@ -19,6 +19,7 @@ function BookSearch() {
   const [addBook] = useMutation(ADD_BOOK);
   const [result, setResult] = useState([]);
   const [apiKey] = useState("AIzaSyDgmjmghFQvvxLztdDeOKE0eqkG_HgdV84");
+
   // For the Favourite Button
   const handleButtonClick = async (event) => {
     event.preventDefault();
@@ -115,14 +116,14 @@ function BookSearch() {
                   src={book.volumeInfo.imageLinks.thumbnail}
                   alt={book.title}
                 />
-                <Button bg="pink.100">
+          
                   <button
                      id="favourite"
                      onClick={handleButtonClick}
                      data-bookcover={book.volumeInfo.imageLinks.thumbnail}
-                  ></button>
-                  Favourite
-                </Button>
+                  >Favourite</button>
+                  
+              
               </GridItem>
             ))}
           </Grid>
