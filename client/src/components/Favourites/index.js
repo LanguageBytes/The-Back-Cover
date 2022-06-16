@@ -6,7 +6,6 @@ const Favourites = ({books}) => {
   }
   return (
     <div>
-      <h3>My Books</h3>
       {books &&
         books.map((books) => (
             <img src = {books.bookcover}/>
