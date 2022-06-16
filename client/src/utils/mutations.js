@@ -37,3 +37,15 @@ export const ADD_USER = gql`
  addBook ( bookCover: $bookCover )
  }
  `;
+
+ export const ADD_COMMENT = gql`
+  mutation addComment($thoughtId: ID!, $commentText: String!) {
+    addComment(thoughtId: $thoughtId, commentText: $commentText)  {
+        _id
+        commentText
+        createdAt
+      }
+    }
+  }
+`;
+
