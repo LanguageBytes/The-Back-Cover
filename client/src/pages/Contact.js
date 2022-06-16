@@ -30,13 +30,19 @@ const Contact = () => {
                </GridItem> 
                </Hide>
                <GridItem w='100%' p='6'  mt='2' >
-                   <Icon color='orange.500' as={FiGithub} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                <a href="https://github.com/LanguageBytes">
+                <Icon color='orange.500' as={FiGithub} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                </a>
                </GridItem>
                <GridItem w='100%' p='6' mt='2' >
-               <Icon color='orange.500' as={FiLinkedin} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                <a href="https://www.linkedin.com/in/sarah-lloyd-19673b135/">
+                <Icon color='orange.500' as={FiLinkedin} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                </a>
                </GridItem>
                <GridItem w='100%' p='6' mt='2'>
-                   <Icon color='orange.500' as={FiMail} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                <a href="mailto:lcrgunn@gmail.com">
+                <Icon color='orange.500' as={FiMail} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                </a>
                </GridItem>
            </Grid>
        </Center>
@@ -53,13 +59,19 @@ const Contact = () => {
                </GridItem> 
                </Hide>
                <GridItem w='100%' p='6' mt='2'  >
-                   <Icon color='red.500'  as={FiGithub} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                <a href="https://github.com/LisaCR01">
+                <Icon color='red.500'  as={FiGithub} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                </a>
                </GridItem>
                <GridItem w='100%' p='6' mt='2' >
-               <Icon color='red.500' as={FiLinkedin} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                <a href="https://www.linkedin.com/in/LisaCR01">
+                <Icon color='red.500' as={FiLinkedin} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                </a>
                </GridItem>
                <GridItem w='100%' p='6' mt='2'>
-               <Icon color='red.500' as={FiMail} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                <a href="mailto:lcrgunn@gmail.com">
+                <Icon color='red.500' as={FiMail} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                </a>
                </GridItem>
            </Grid>
        </Center>
@@ -76,13 +88,19 @@ const Contact = () => {
                </GridItem> 
                </Hide>
                <GridItem w='100%' p='6' mt='2'>
-               <Icon color='blue.500' as={FiGithub} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                <a href="https://github.com/samira0101">
+                <Icon color='blue.500' as={FiGithub} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                </a>
                </GridItem>
                <GridItem w='100%' p='6' mt='2'>
-               <Icon color='blue.500' as={FiLinkedin} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                <a href="www.linkedin.com/in/samira-hirsi-4609131a8">
+                <Icon color='blue.500' as={FiLinkedin} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                </a>
                </GridItem>
                <GridItem w='100%' p='6' mt='2'>
-               <Icon color='blue.500' as={FiMail} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                <a  href="mailto:lcrgunn@gmail.com">
+                <Icon color='blue.500' as={FiMail} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                </a>
                </GridItem>
            </Grid>
        </Center>
