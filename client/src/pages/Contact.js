@@ -7,7 +7,10 @@ import { FiGithub } from 'react-icons/fi'
 import {FiLinkedin} from 'react-icons/fi'
 import {FiMail} from 'react-icons/fi'
 import { Avatar, AvatarBadge, AvatarGroup } from '@chakra-ui/react'
-import './Contact.css'
+import sarah from "./assets/Sarah.jpg"
+import lisa from "./assets/Lisa.jpeg"
+import samira from "./assets/Samira.jpg"
+import './Contact.css' 
 const Contact = () => {
     return (
       <Container mt='4' p='10' boxShadow='dark-lg' className="contact-container">
@@ -15,7 +18,7 @@ const Contact = () => {
       <Center bg='orange.100'>
            <Grid templateColumns='repeat(4, 1fr)' gap={6}>
               <GridItem w='100%' p='4'>
-              <Avatar size='xl' name='Dan Abrahmov' src='https://bit.ly/dan-abramov' />
+              <Avatar size='xl' name='Sarah' src={sarah} />
                </GridItem> 
                <GridItem w='100%' p='6'  mt='2' >
                    <Icon color='orange.500' as={FiGithub} w={16} h={16} />
@@ -31,7 +34,7 @@ const Contact = () => {
        <Center bg='red.100'>
        <Grid templateColumns='repeat(4, 1fr)' gap={6}>
               <GridItem w='100%' p='4'>
-              <Avatar size='xl' name='Dan Abrahmov' src='https://bit.ly/dan-abramov' />
+              <Avatar size='xl' name='Lisa' src={lisa} />
                </GridItem> 
                <GridItem w='100%' p='6' mt='2'>
                    <Icon color='red.500' as={FiGithub} w={16} h={16} />
@@ -47,7 +50,7 @@ const Contact = () => {
        <Center bg='blue.100'>
        <Grid templateColumns='repeat(4, 1fr)' gap={6}>
               <GridItem w='100%' p='4'>
-              <Avatar size='xl' name='Dan Abrahmov' src='https://bit.ly/dan-abramov' />
+              <Avatar size='xl' name='Samira' src={samira} />
                </GridItem> 
                <GridItem w='100%' p='6' mt='2'>
                <Icon color='blue.500' as={FiGithub} w={16} h={16} />
