@@ -42,15 +42,17 @@ THEN  I am able to view the posts of other users.
 ## Challenges
 
 - Our main struggle through this project was being able to retrieve a single book cover through the Google Books API. We fixed this by scrutinising every detail of our code and being determined to find the bug. 
-- Another challenge we had was running into a lot of non descriptive errors such as Proxy errors, npm errors and issues with node updates. We overcame this by researching online ways to debug these error until we found ones that worked.
+- Another challenge we had was running into a lot of non descriptive errors such as Proxy errors, npm errors and issues with node updates. We overcame this by researching online ways to debug these errors until we found ones that worked.
 - One more obstacle we faced was when working individually, we would have merging conflicts, we improved on this by communicating effectively to what we were currently working on.
 
 
 ## Successes
 
-- Teamwork
-- Finding an API that works
-- User able to sign up and log in
+- Our teamwork was a great success as we met on a zoom call every day to get through all the challenges we were facing in the project. This meant we were able to tackle any problems we were having as a group. 
+- Another success we had was the use of the chakra ui as originally intended on using Semantic UI but ran into a variety of bugs. We were worried about using another component library because of this . We however had a straightforward experience with this UI and easily made the application responsive.
+- An additional success is that our application is interactive and straightforward to use, for example they can log in and sign up with there being many buttons that will lead them to these pages.
+- The final success is that we were able to make a user-focused MERN app that can store the needed data.
+
 
 
 ## Future Developments
