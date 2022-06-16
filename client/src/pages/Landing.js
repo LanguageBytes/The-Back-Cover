@@ -15,9 +15,9 @@ const Landing = () => {
       <Heading fontSize='30px ' p='4' fontWeight='normal' className="landing-title">Welcome to our site ‘The Book Cover’!</Heading>
       <Container boxShadow='dark-lg' className="form-background-landing" p='4' my='4'>
       <Box>
-            <Image src={bookcover} alt='a group of books' boxSize='600px' h='400px'/>
+            <Image src={bookcover} alt='a group of books' boxSize={{ base: '600px', md: '600px', lg: '600px' }} h= {{ base: '300px', md: '400px', lg: '400px' }}/>
       </Box>
-    <Text fontSize='25px' p='2' className="landing-text">We hope you enjoy your time here; as you may have guessed from our name, this is a place for bookworms to express themselves and find their next book obsession. We function how you would use a back cover of a book, to quickly scan and decide which ones take your fancy, in a love at first sight kind of way .</Text>
+    <Text fontSize={{ base: '18px', md: '18px', lg: '22px' }} p='2' className="landing-text">We hope you enjoy your time here; as you may have guessed from our name, this is a place for bookworms to express themselves and find their next book obsession. We function how you would use a back cover of a book, to quickly scan and decide which ones take your fancy, in a love at first sight kind of way .</Text>
       </Container>
     </Container>
     );
