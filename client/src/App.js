@@ -12,6 +12,7 @@ import Contact from './pages/Contact';
 import Community from './pages/Community';
 import MyBooks from './pages/MyBooks';
 import Nav from './components/Nav/index';
+import Footer from './components/Footer/index'
 import { Box } from '@chakra-ui/react'
 
 // Google Books API calls
@@ -87,6 +88,7 @@ function App() {
             </Routes>
         </div>
       </Router>
+      <Footer />
     </ApolloProvider>
   );
 }

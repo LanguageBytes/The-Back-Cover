@@ -12,7 +12,6 @@ type User {
 
 type Book {
     _id: ID
-    bookTitle: String!
     bookCover: String!
 }
 
@@ -39,7 +38,7 @@ type Query {
 type Mutation {
     addUser(userName: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addBook (bookTitle: String!, bookCover: String!): Book
+    addBook (bookCover: String!): Book
     addComment(
         bookId: ID!
         commentText: String!

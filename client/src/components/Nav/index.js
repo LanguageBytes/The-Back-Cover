@@ -15,19 +15,16 @@ import {GiRead} from 'react-icons/gi'
 import { Text } from '@chakra-ui/react'
 import './Nav.css'
 function Nav() {
-
   const colors = useColorModeValue(
     ['green.50', 'teal.50', 'blue.50','purple.50','pink.50','orange.50'],
   )
   const [tabIndex, setTabIndex] = React.useState(0)
   const bg = colors[tabIndex]
-
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
         <Tabs onChange={(index) => setTabIndex(index)} bg={bg} colorScheme='white'>
           <TabList>
-            <Heading color='blue.600' as='i' fontSize='30px' p='2'></Heading>
             <Tab  fontSize={{ base: '18px', md: '22px', lg: '28px' }} color='#48BB78'>
           <div c>
             <Link to="/home">
@@ -90,7 +87,6 @@ function Nav() {
       );
     }
   }
-
   return (
     <header>
       <Heading fontWeight='light' p='4' className="app-title">
@@ -100,12 +96,10 @@ function Nav() {
         </Text>
         </Link>
       </Heading>
-
       <nav>
         {showNavigation()}
       </nav>
     </header>
   );
 }
-
 export default Nav;
