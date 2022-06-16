@@ -22,23 +22,23 @@ const handleButtonClick= async (event) => {
   try {
   const mutationResponse = await addBook({
     variables: {
-      bookCover: buttonState.bookCover,
+      bookCover: event.target.value,
     },
   });
-    console.log(setButtonState)
-    console.log(mutationResponse)
+    /*console.log(setButtonState)
+    console.log(mutationResponse)*/
   } catch (err) {
     console.error(err);
   }
 };
-const handleChange = (event) => {
+/*const handleChange = (event) => {
   const { name, value } = event.target;
   setButtonState({
     ...buttonState,
     [name]: value,
   });
   console.log(buttonState)
-};
+};*/
 // For the API call
 function changeHandler(event){
   const book = event.target.value;
@@ -72,7 +72,7 @@ function submitHandler(event){
       <GridItem w='100%' colSpan={1} >
       <img src = {book.volumeInfo.imageLinks.thumbnail} alt ={book.title}/>
       <Button>
-      <button onChange={handleChange} onClick={handleButtonClick} bookCover={book.volumeInfo.imageLinks.thumbnail}> Favourite</button> </Button>
+      <button /*onChange={handleChange}*/ onClick={handleButtonClick} value={book.volumeInfo.imageLinks.thumbnail}> Favourite</button> </Button>
       </GridItem>
      )}
      </GridItem>
