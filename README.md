@@ -41,9 +41,10 @@ THEN  I am able to view the posts of other users.
 
 ## Challenges
 
-- Connecting the API to make individual book covers (Creating favourites function)
-- Proxy errors, npm errors and issues with node updates 
-- 
+- Our main struggle through this project was being able to retrieve a single book cover through the Google Books API. We fixed this by scrutinising every detail of our code and being determined to find the bug. 
+- Another challenge we had was running into a lot of non descriptive errors such as Proxy errors, npm errors and issues with node updates. We overcame this by researching online ways to debug these error until we found ones that worked.
+- One more obstacle we faced was when working individually, we would have merging conflicts, we improved on this by communicating effectively to what we were currently working on.
+
 
 ## Successes
 
