@@ -45,14 +45,10 @@ const resolvers = {
     
     addBook: async (parent, { bookcover }) => {
       const book = await Book.create({ bookcover });
-
-      await User.findOneAndUpdate(
-        { userName: bookcover },
-        { $addToSet: { books: book._id } }
-      );
+    
       return book;
     },
-    
+
     addComment: async (parent, { bookId, commentText, commentAuthor }) => {
       return Book.findOneAndUpdate(
         { _id: bookId },

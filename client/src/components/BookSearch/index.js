@@ -41,9 +41,7 @@ const handleButtonClick= async (event) => {
   console.log(event.target.dataset)
   try {
   const mutationResponse = await addBook({
-    data: {
-    bookcover: event.target.dataset
-    },
+    variables: event.target.dataset,
   });
   } catch (err) {
     console.error(err);
@@ -71,7 +69,7 @@ const handleButtonClick= async (event) => {
       <GridItem w='100%' colSpan={1} >
       <a><img src = {book.volumeInfo.imageLinks.thumbnail} alt ={book.title}/> </a>
       <Button> 
-      <button id="favourite" onClick={handleButtonClick} data-bookCover={book.volumeInfo.imageLinks.thumbnail}> Favourite</button> </Button>
+      <button id="favourite" onClick={handleButtonClick} data-bookcover={book.volumeInfo.imageLinks.thumbnail}> Favourite</button> </Button>
       </GridItem>
      )}
      </GridItem>
