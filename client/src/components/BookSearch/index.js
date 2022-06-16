@@ -69,7 +69,8 @@ function submitHandler(event){
      </form>
      </FormControl>
      </GridItem>
-     <GridItem rowSpan={2} colSpan={2}>
+     <GridItem>
+     <Grid templateColumns='repeat(5, 1fr)' gap={2}>
      {result.map(book =>
       <GridItem w='100%' colSpan={1} >
       <img src = {book.volumeInfo.imageLinks.thumbnail} alt ={book.title}/>
@@ -77,6 +78,7 @@ function submitHandler(event){
       <button onChange={handleChange} onClick={handleButtonClick} bookCover={book.volumeInfo.imageLinks.thumbnail}> Favourite</button> </Button>
       </GridItem>
      )}
+     </Grid>
      </GridItem>
      </Grid>
       </Container>
