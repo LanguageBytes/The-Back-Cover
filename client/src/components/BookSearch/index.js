@@ -25,8 +25,9 @@ const handleButtonClick= async (event) => {
       bookCover: buttonState.bookCover,
     },
   });
-    console.log(setButtonState)
-    console.log(mutationResponse)
+  console.log(mutationResponse)
+    /*console.log(setButtonState)
+    console.log(mutationResponse)*/
   } catch (err) {
     console.error(err);
   }
