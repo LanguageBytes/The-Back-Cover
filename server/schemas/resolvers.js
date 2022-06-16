@@ -42,16 +42,17 @@ const resolvers = {
 
       return { token, user };
     },
-    addBook: async (parent, { bookCover }) => {
-      const book = await Book.create({ bookCover });
+    
+    addBook: async (parent, { bookcover }) => {
+      const book = await Book.create({ bookcover });
 
       await User.findOneAndUpdate(
-        { userName: bookCover },
+        { userName: bookcover },
         { $addToSet: { books: book._id } }
       );
-
       return book;
     },
+    
     addComment: async (parent, { bookId, commentText, commentAuthor }) => {
       return Book.findOneAndUpdate(
         { _id: bookId },
