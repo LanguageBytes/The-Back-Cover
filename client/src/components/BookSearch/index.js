@@ -45,6 +45,7 @@ const handleChange = (event) => {
   });
   console.log(buttonState)
 };
+
 // For the API call
 function changeHandler(event){
   const book = event.target.value;
