@@ -150,7 +150,7 @@ const Contact = () => {
                 </a>
                </GridItem>
                <GridItem w='100%' p='6' mt='2'>
-                <a href="www.linkedin.com/in/samira-hirsi-4609131a8">
+                <a href="https:www.linkedin.com/in/samira-hirsi-4609131a8">
                 <Icon color='blue.500' as={FiLinkedin} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
                 </a>
                </GridItem>
@@ -175,7 +175,7 @@ const Contact = () => {
                 </a>
                </GridItem>
                <GridItem w='100%' p='6' mt='2'>
-                <a href="www.linkedin.com/in/samira-hirsi-4609131a8">
+                <a href="https:www.linkedin.com/in/samira-hirsi-4609131a8">
                 <Icon color='blue.500' as={FiLinkedin} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
                 </a>
                </GridItem>

@@ -1,13 +1,19 @@
 # The Back Cover
 
-
 ## Description
 
+What was your motivation?
+- 
+Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
+What problem does it solve?
+What did you learn?
+What makes your project stand out?
 An application tailored to bookworms.
 
 ## Technology 
 
 - React
+- Chakra UI
 - Javascript 
 - Concurrently
 - Bcrypt
@@ -15,6 +21,7 @@ An application tailored to bookworms.
 - Apollo Server
 - Axios
 - Google Books API
+- react icons
 
 ## User Story
 ```
@@ -42,6 +49,7 @@ THEN  I am able to view the posts of other users.
 
 - Connecting the API to make individual book covers (Creating favourites function)
 - Proxy errors, npm errors and issues with node updates 
+- 
 
 ## Successes
 
@@ -53,4 +61,17 @@ THEN  I am able to view the posts of other users.
 
 Reference
 
-AIzaSyDgmjmghFQvvxLztdDeOKE0eqkG_HgdV84
+## Contact Information
+
+### Github
+- [Sarah](https://github.com/LanguageBytes)
+- [Lisa](https://github.com/LisaCR01)
+- [Samira](https://github.com/samira0101)
+### LinkedIn
+- [Sarah](https://www.linkedin.com/in/sarah-lloyd-19673b135/)
+- [Lisa](https://www.linkedin.com/in/LisaCR01)
+- [Samira](https:www.linkedin.com/in/samira-hirsi-4609131a8)
+### Emails
+- [Sarah](mailto:sarahlloyd407a@gmail.com)
+- [Lisa](mailto:lcrgunn@gmail.com)
+- [Samira](mailto:samira-h@hotmail.co.uk)

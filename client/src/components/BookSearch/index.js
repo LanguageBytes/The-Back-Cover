@@ -11,6 +11,9 @@ import { Flex, Spacer } from '@chakra-ui/react'
 import { useMutation } from '@apollo/client';
 import { ADD_BOOK } from '../../utils/mutations';
 import {Image} from '@chakra-ui/react'
+import {BsSuitHeart} from 'react-icons/bs'
+import { Icon } from '@chakra-ui/react'
+
 function BookSearch() {
 const [book, setBook] = useState("");
 const [buttonState, setButtonState] = useState({ bookCover: '' });
@@ -56,34 +59,37 @@ function submitHandler(event){
   })
 }
   return (
-   <Container py={{base:'0' ,md:'4', lg:'6'}}>
+   <Box py={{base:'0' ,md:'4', lg:'6'}}>
     <Heading fontSize='30px ' p='4' fontWeight='normal' className="discovery-title" >Discovery</Heading>
       <Grid h='200px'
-            templateColumns='repeat(6, 1fr)'
-            gap={2}>
-    <GridItem colSpan={{ base: '6', md: '6', lg: '3' }}>
-    <FormControl  p='4' my='4' boxShadow='dark-lg' className="discovery-form-background" >
+            templateColumns='repeat(8, 1fr)'
+            gap={6}>
+    <GridItem colSpan={{ base: '8', md: '8', lg: '5' }}>
+    <FormControl p={{base:'4' ,md:'4', lg:'10'}} my='4' boxShadow='dark-lg' className="discovery-form-background" >
     <Heading fontWeight="light" className="form-heading-discovery" py='2' fontSize='25px'>Search Books</Heading>
      <form onSubmit={submitHandler}>
          <Input bg='cyan.100' type ="text" onChange={changeHandler} placeholder="Enter a book name" autoComplete="off"></Input>
-       <Button  variant='solid' mt='4' className="discovery-button" type="submit"> Search
+       <Button variant='solid' mt='4' className="discovery-button" type="submit"> Search
        </Button>
      </form>
      </FormControl>
      </GridItem>
-     <GridItem colSpan={{base:'6' ,md:'6', lg:'3'}}>
+     <GridItem colSpan={{base:'8' ,md:'8', lg:'3'}}>
      <Grid templateColumns={{base:'repeat(5, 1fr)', md:'repeat(5,1fr)', lg:'repeat(4,1fr)', xl:'repeat(5,1fr)'}} gap={2}>
      {result.map(book =>
       <GridItem w='100%' colSpan={1} >
       <img className="book-cover" src = {book.volumeInfo.imageLinks.thumbnail} alt ={book.title}/>
-      <Button>
-      <button onChange={handleChange} onClick={handleButtonClick} bookCover={book.volumeInfo.imageLinks.thumbnail}></button>Favourite </Button>
+      <Button bg='pink.100'>
+      <button onChange={handleChange} onClick={handleButtonClick} bookCover={book.volumeInfo.imageLinks.thumbnail}>
+      </button>
+      Favourite
+       </Button>
       </GridItem>
      )}
      </Grid>
      </GridItem>
      </Grid>
-      </Container>
+      </Box>
   );
 
      }
