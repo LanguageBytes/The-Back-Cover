@@ -8,10 +8,7 @@ import './Home.css'
 const Home = () => {
     return (
       <Container>
-          <Box p='4'>
-        <Heading fontSize='30px ' p='4' fontWeight='normal' className="discovery-title" >Discovery</Heading>
         <BookSearch />
-        </Box>
       </Container>
   
     );

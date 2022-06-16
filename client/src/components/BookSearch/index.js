@@ -53,7 +53,8 @@ function submitHandler(event){
   })
 }
   return (
-   <Container>
+   <Container py='10'>
+    <Heading fontSize='30px ' p='4' fontWeight='normal' className="discovery-title" >Discovery</Heading>
       <Grid h='200px'
             templateColumns='repeat(3, 1fr)'
             gap={4}>
