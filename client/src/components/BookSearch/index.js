@@ -10,6 +10,7 @@ import {Box} from '@chakra-ui/react'
 import { Flex, Spacer } from '@chakra-ui/react'
 import { useMutation } from '@apollo/client';
 import { ADD_BOOK } from '../../utils/mutations';
+import {Image} from '@chakra-ui/react'
 function BookSearch() {
 const [book, setBook] = useState("");
 const [buttonState, setButtonState] = useState({ bookCover: '' });
@@ -19,6 +20,7 @@ const [apiKey] = useState("AIzaSyDgmjmghFQvvxLztdDeOKE0eqkG_HgdV84");
 // For the Favourite Button
 const handleButtonClick= async (event) => {
   event.preventDefault();
+  console.log("Hello")
   try {
   const mutationResponse = await addBook({
     variables: {
@@ -57,9 +59,9 @@ function submitHandler(event){
    <Container py='10'>
     <Heading fontSize='30px ' p='4' fontWeight='normal' className="discovery-title" >Discovery</Heading>
       <Grid h='200px'
-            templateColumns='repeat(3, 1fr)'
-            gap={4}>
-    <GridItem colSpan={1}>
+            templateColumns='repeat(6, 1fr)'
+            gap={2}>
+    <GridItem colSpan={3}>
     <FormControl  p='4' my='4' boxShadow='dark-lg' className="discovery-form-background" >
     <Heading fontWeight="light" className="form-heading-discovery" py='2' fontSize='25px'>Search Books</Heading>
      <form onSubmit={submitHandler}>
@@ -69,13 +71,13 @@ function submitHandler(event){
      </form>
      </FormControl>
      </GridItem>
-     <GridItem>
+     <GridItem colSpan={3}>
      <Grid templateColumns='repeat(5, 1fr)' gap={2}>
      {result.map(book =>
       <GridItem w='100%' colSpan={1} >
-      <img src = {book.volumeInfo.imageLinks.thumbnail} alt ={book.title}/>
+      <img className="book-cover" src = {book.volumeInfo.imageLinks.thumbnail} alt ={book.title}/>
       <Button>
-      <button onChange={handleChange} onClick={handleButtonClick} bookCover={book.volumeInfo.imageLinks.thumbnail}> Favourite</button> </Button>
+      <button onChange={handleChange} onClick={handleButtonClick} bookCover={book.volumeInfo.imageLinks.thumbnail}></button>Favourite </Button>
       </GridItem>
      )}
      </Grid>
