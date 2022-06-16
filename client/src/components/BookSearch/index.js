@@ -56,12 +56,12 @@ function submitHandler(event){
   })
 }
   return (
-   <Container py='10'>
+   <Container py={{base:'0' ,md:'4', lg:'6'}}>
     <Heading fontSize='30px ' p='4' fontWeight='normal' className="discovery-title" >Discovery</Heading>
       <Grid h='200px'
             templateColumns='repeat(6, 1fr)'
             gap={2}>
-    <GridItem colSpan={3}>
+    <GridItem colSpan={{ base: '6', md: '6', lg: '3' }}>
     <FormControl  p='4' my='4' boxShadow='dark-lg' className="discovery-form-background" >
     <Heading fontWeight="light" className="form-heading-discovery" py='2' fontSize='25px'>Search Books</Heading>
      <form onSubmit={submitHandler}>
@@ -71,8 +71,8 @@ function submitHandler(event){
      </form>
      </FormControl>
      </GridItem>
-     <GridItem colSpan={3}>
-     <Grid templateColumns='repeat(5, 1fr)' gap={2}>
+     <GridItem colSpan={{base:'6' ,md:'6', lg:'3'}}>
+     <Grid templateColumns={{base:'repeat(5, 1fr)', md:'repeat(5,1fr)', lg:'repeat(4,1fr)', xl:'repeat(5,1fr)'}} gap={2}>
      {result.map(book =>
       <GridItem w='100%' colSpan={1} >
       <img className="book-cover" src = {book.volumeInfo.imageLinks.thumbnail} alt ={book.title}/>
