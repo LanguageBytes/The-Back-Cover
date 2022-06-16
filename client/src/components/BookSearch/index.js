@@ -113,14 +113,11 @@ function BookSearch() {
                   src={book.volumeInfo.imageLinks.thumbnail}
                   alt={book.title}
                 />
-                <Button bg="pink.100">
                   <button
                      id="favourite"
                      onClick={handleButtonClick}
                      data-bookcover={book.volumeInfo.imageLinks.thumbnail}
-                  ></button>
-                  Favourite
-                </Button>
+                  > Favourite </button>
               </GridItem>
             ))}
           </Grid>

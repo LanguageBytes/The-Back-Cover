@@ -31,10 +31,13 @@ export const ADD_USER = gql`
 `;
 
 
- export const ADD_BOOK = gql` 
- mutation 
- addBook ( $bookCover: String!) {
- addBook ( bookCover: $bookCover )
+export const ADD_BOOK = gql`
+ mutation
+ addBook ( $bookcover: String!) {
+ addBook ( bookcover: $bookcover ){
+  _id
+  bookcover
+  }
  }
  `;
 
