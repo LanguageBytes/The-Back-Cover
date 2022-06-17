@@ -27,10 +27,40 @@ function BookSearch() {
   // The data can then be used on a different page
  function handleDescription(event) {
   event.preventDefault(); {
-    const Description = event.target.getAttribute("data-value")
-    console.log(event.target.getAttribute("data-value"))
+
+  // Each item to be set in separate local storage locations
+  // Heading
+    const Heading = event.target.getAttribute("data-heading")
+    console.log(event.target.getAttribute("data-heading"))
+    localStorage.setItem('Heading', Heading);
+      console.log(event.target.getAttribute("data-heading"))
+
+    // Description
+    const Description = event.target.getAttribute("data-desc")
+    console.log(event.target.getAttribute("data-desc"))
     localStorage.setItem('Description', Description);
-      console.log(event.target.getAttribute("data-value"))
+      console.log(event.target.getAttribute("data-desc"))
+
+    // Author
+    const Author = event.target.getAttribute("data-author")
+    console.log(event.target.getAttribute("data-author"))
+    localStorage.setItem('Author', Author);
+      console.log(event.target.getAttribute("data-author"))
+
+    // Image
+    const Image = event.target.getAttribute("data-image")
+    console.log(event.target.getAttribute("data-image"))
+    localStorage.setItem('Image', Image);
+    console.log(event.target.getAttribute("data-image"))
+
+    // Published
+    const Published = event.target.getAttribute("data-published")
+    console.log(event.target.getAttribute("data-published"))
+    localStorage.setItem('Published', Published);
+      console.log(event.target.getAttribute("data-published"))
+
+
+    // Once this data is saved in storage to be retrieved, relocate the user to the Description page
       window.location.href = "/Description";
     }; 
 }
@@ -72,7 +102,7 @@ function BookSearch() {
         setResult(data.data.items);
       });
   }
-  
+
   return (
     <Box py={{ base: "0", md: "4", lg: "6" }}>
       <Heading
@@ -144,8 +174,13 @@ function BookSearch() {
                   <br/>
                   <div>
                   
-                  <button data-value={book.volumeInfo.description} onClick={handleDescription} value={book.volumeInfo.description}> Read More </button> 
-                  
+                  <button 
+                  data-desc={book.volumeInfo.description}
+                  data-heading={book.volumeInfo.title}
+                  data-author={book.volumeInfo.authors}
+                  data-image={book.volumeInfo.imageLinks.thumbnail}
+                  data-published={book.volumeInfo.publishedDate}
+                  onClick={handleDescription} value={book.volumeInfo.description}> Read More </button> 
                   </div>
                   <button
                      id="favourite"

@@ -1,13 +1,36 @@
 import React from "react";
+import './Description.css'
 
+const heading = localStorage.getItem('Heading')
+const author = localStorage.getItem('Author')
 const description = localStorage.getItem('Description');
+const Image = localStorage.getItem('Image')
+const Published = localStorage.getItem('Published')
 
 const Description= () => {
 
   return (
-    <div>
-      <h1>{description}</h1>
+      
+    <div className="container"> 
+     <div className="card">
+      <p className="heading">{heading} </p>
+      <p className="author">Written by {author} </p>
+      <div>
+      <p className="description">{description}</p>
+      <p className="published">Date published: {Published}</p>
+      <button className="link"> Get this Book </button>
+      </div>
+      </div>
+
+      <div className="card"> 
+      <div>
+      <img src={Image} className="image"/>
+      </div>
+      </div>
+
     </div>
+
+    
   );
 };
 export default Description;
