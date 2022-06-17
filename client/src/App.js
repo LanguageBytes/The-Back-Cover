@@ -15,6 +15,8 @@ import Nav from './components/Nav/index';
 import Footer from './components/Footer/index'
 import { Box } from '@chakra-ui/react'
 import Description from "./pages/Description";
+import freeEBooks from "./pages/freeEbooks";
+import EBooksSearch from "./components/freeEbooks";
 
 // Google Books API calls
 // const getBooksByAuthor = 'https://www.googleapis.com/books/v1/volumes?q=prideandprejudice+intitle&key=AIzaSyDgmjmghFQvvxLztdDeOKE0eqkG_HgdV84
@@ -75,6 +77,10 @@ function App() {
                 element={<Home />} 
               />
                  <Route 
+                path="/ebookssearch" 
+                element={<EBooksSearch />} 
+              />
+                 <Route 
                 path="/contact" 
                 element={<Contact />} 
               />
@@ -82,7 +88,11 @@ function App() {
                 path="/description" component="BookSearch" 
                 element={<Description />} 
               />
+
+              
             </Routes>
+
+           
         </div>
       </Router>
       <Footer />

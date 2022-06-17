@@ -43,11 +43,19 @@ function Nav() {
           </Tab >
           <Tab fontSize={{ base: '18px', md: '22px', lg: '28px' }}  color='#4299E1'>
           <div c>
-            <Link to="/community">
-              <Hide below='md'>Community</Hide>
+            <Link to="/ebookssearch">
+              <Hide below='md'> Free Books</Hide>
               <Hide above='md'><Icon color='#4299E1' as={RiQuestionAnswerLine} w={10} h={10} /></Hide>
             </Link>
           </div>
+
+          {/* <div c>
+            <Link to="/Community">
+              <Hide below='md'>Community</Hide>
+              <Hide above='md'><Icon color='#4299E1' as={RiQuestionAnswerLine} w={10} h={10} /></Hide>
+            </Link>
+          </div> */}
+       
           </Tab>
           <Tab fontSize={{ base: '18px', md: '22px', lg: '28px' }}  color='#9F7AEA'>
           <div c>
@@ -57,6 +65,7 @@ function Nav() {
             </Link>
           </div>
           </Tab>
+      
           <Tab  fontSize={{ base: '22px', md: '22px', lg: '28px' }}  color='#ED8936'>
           <div >
             {/* this is not using the Link component to logout or user and then refresh the application to the start */}
@@ -64,7 +73,9 @@ function Nav() {
               Log out
             </a>
           </div>
+       
           </Tab>
+          
           </TabList>
           </Tabs>
       );

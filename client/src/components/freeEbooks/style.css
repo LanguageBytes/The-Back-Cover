@@ -1,0 +1,138 @@
+.form-heading-discovery {
+    color:rgba(253,233,223,1);
+}
+
+.discovery-form-background {
+    background: rgb(136,112,126);
+background: linear-gradient(90deg, rgba(136,112,126,1) 0%, rgba(181,147,168,1) 52%, rgba(136,112,126,1) 100%);
+}
+
+
+
+@media screen and (min-width: 1351px){
+    .book-cover {
+        height: 220px;
+        width: 187px    
+  }
+  .book-button,.info-button {
+    width: 187px
+}
+}
+@media screen and (max-width: 1350px){
+    .book-cover {
+        height: 200px;
+        width: 170px    
+  }
+    .book-button,.info-button {
+        width: 170px
+    }
+}
+
+  @media screen and (max-width: 1168px){
+    .book-cover {
+        height: 180px; 
+        width: 153px 
+  }
+    .book-button,.info-button {
+        width: 153px;
+    }
+
+}
+
+
+.book-button{
+background: rgb(50,61,113);
+background: linear-gradient(90deg, #93a1e3 0%, #8189b0 52%, #0cb09f 100%);
+}
+
+.info-button  {
+    background: rgb(76,91,164);
+background: linear-gradient(90deg, rgb(67, 216, 146) 0%, rgba(185,190,215,1) 52%, rgb(222, 188, 238) 88%);
+}
+
+span {
+    color:rgb(204, 249, 249);
+}
+
+.book-button,
+.discovery-button,
+.info-button  {
+    display: inline-block;
+    border-radius: 4px;
+    border: none;
+    text-align: center;
+    font-size: 22px;
+    padding: 3px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 1px;
+  }
+
+  .book-button{
+    color: #FFFFFF;
+  }
+
+  .discovery-button {
+    color:#323d71;
+  }
+
+  .info-button {
+    color: #323d71;
+  }
+
+  
+  .discovery-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+
+  .discovery-button span:after {
+    content: '🔍';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+.discovery-button:hover {
+    color: #b4bad6;
+    transition: 0s;
+}
+
+  .discovery-button:hover span{
+    padding-right: 25px;
+  }
+  
+  .discovery-button:hover span:after{
+    opacity: 1;
+    right: 0;
+  }
+
+  .book-button:hover,.info-button:hover {
+    opacity: 0.7;
+    right: 0;
+  }
+
+  .book-container {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .grid-books {
+    display: block;
+    margin-left: 10px;
+    margin-right: auto
+  }
+
+.search-grid {
+    border-color: #5b6490;
+    border-radius: 5px;
+}
+
+.favourites-title {
+    margin: 2%;
+}
