@@ -5,9 +5,9 @@ import { Container } from '@chakra-ui/react'
 import './Home.css'
 const Home = () => {
     return (
-      <Container>
+      <div>
         <BookSearch />
-      </Container>
+      </div>
     );
   };
   

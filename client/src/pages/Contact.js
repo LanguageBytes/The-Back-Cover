@@ -15,8 +15,16 @@ import { Text } from '@chakra-ui/react'
 import './Contact.css' 
 const Contact = () => {
     return (
+      <div>
+      <Heading 
+        className="favourites-title"
+        bg='#323d71'
+        bgClip='text'
+        fontSize='6xl'
+        fontWeight='normal'
+        textAlign={'center'}>
+        Contact Us</Heading>
       <Container mt='4' p={{ base: '0', md: '4', lg: '8' }} boxShadow='dark-lg' className="contact-container">
-        <Heading fontSize='30px ' p='4' fontWeight='normal' className="contact-title" >Contact Us</Heading>
     <Hide above='lg'>
       <Center bg='orange.100' >
            <Grid templateColumns='repeat(4, 1fr)' gap={6}>
@@ -188,6 +196,7 @@ const Contact = () => {
         </Hide>
        </Center>
        </Container>
+       </div>
     );
   };
   

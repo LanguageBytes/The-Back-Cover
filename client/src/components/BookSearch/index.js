@@ -6,7 +6,7 @@ import { Heading } from "@chakra-ui/react";
 import { Input } from "@chakra-ui/react";
 import { Button } from "@chakra-ui/react";
 import { Grid, GridItem } from "@chakra-ui/react";
-import { Box } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 import { Flex, Spacer } from "@chakra-ui/react";
 import { useMutation } from "@apollo/client";
 import { ADD_BOOK } from "../../utils/mutations";
@@ -104,19 +104,22 @@ function BookSearch() {
   }
 
   return (
-    <Box py={{ base: "0", md: "4", lg: "6" }}>
-      <Heading
-        fontSize="30px "
-        p="4"
-        fontWeight="normal"
-        className="discovery-title"
+    <div className="book-container">
+      <Text 
+        className="favourites-title"
+        bg='#323d71'
+        bgClip='text'
+        fontSize='6xl'
+        fontWeight='normal'
+        textAlign={'center'}
       >
         Discovery
-      </Heading>
-      <Grid h="200px" templateColumns="repeat(8, 1fr)" gap={6}>
-        <GridItem colSpan={{ base: "8", md: "8", lg: "5" }}>
+      </Text>
+      <div>
+      <Grid templateColumns='repeat(6, 1fr)' gap={2} className="grid-books">
+        <GridItem colSpan={{ base: "4", sm:"5", md: "6", lg: "2" }}>
           <FormControl
-            p={{ base: "4", md: "4", lg: "10" }}
+            p={{ base: "2", md: "4", lg: "4" }}
             my="4"
             boxShadow="dark-lg"
             className="discovery-form-background"
@@ -137,38 +140,40 @@ function BookSearch() {
                 placeholder="Enter a book name"
                 autoComplete="off"
               ></Input>
-              <Button
-                variant="solid"
-                mt="4"
+              <button
                 className="discovery-button"
                 type="submit"
               >
                 {" "}
-                Search
-              </Button>
+               <span>Search</span>
+              </button>
             </form>
           </FormControl>
 
         </GridItem>
-        <GridItem colSpan={{ base: "8", md: "8", lg: "3" }}>
+        <GridItem colSpan={{ base:"4" ,sm: "5", md: "6", lg: "4"}} >
           <Grid
             templateColumns={{
-              base: "repeat(5, 1fr)",
-              md: "repeat(5,1fr)",
+              base: "repeat(2, 1fr)",
+              sm:"repeat(3,1fr)",
+              md: "repeat(4,1fr)",
               lg: "repeat(4,1fr)",
-              xl: "repeat(5,1fr)",
+              xl: "repeat(4,1fr)",
             }}
-            gap={2}
+            gap={{base: "2",
+                  sm:"3",
+                  md: "4",
+                 lg: "5",
+                  xl: "5",}}
           >
-            {result.map((book) => (
-              <GridItem w="100%" colSpan={1}>
+            {result.filter((book)=>
+             typeof book.volumeInfo.imageLinks !== "undefined").map((book) => (
+              <GridItem className="search-grid" w="100%" colSpan={1}>
                 <img
                   className="book-cover"
                   src={book.volumeInfo.imageLinks.thumbnail}
                   alt={book.title}
                 />
-
-                <GridItem w="100%" colSpan={2}>
                   <br/>
                   <h1 className="title">{book.volumeInfo.title}</h1>
                   <br/>
@@ -183,19 +188,21 @@ function BookSearch() {
                   onClick={handleDescription} value={book.volumeInfo.description}> Read More </button> 
                   </div>
                   <button
+                     className = "book-button"
                      id="favourite"
                      onClick={handleButtonClick}
                      data-bookcover={book.volumeInfo.imageLinks.thumbnail}
-                  > Add to Favourites </button>
-                   
-                  </GridItem>
+                  > 
+                  <span>Favourite 
+                  </span> 
+                  </button>
               </GridItem>
             ))}
-
           </Grid>
         </GridItem>
       </Grid>
-    </Box>
+</div>
+    </div>
   )};
 
  export default BookSearch
