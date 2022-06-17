@@ -6,7 +6,9 @@
 }
 
 .footer-text {
-    color: rgb(215, 226, 221);
-    background-color:#5b6490;
-    font-style: italic;
+
+    color: #547b7d;
+    background: rgb(147,173,162);
+background: linear-gradient(90deg, rgba(147,173,162,1) 0%, rgba(215,226,221,1) 52%, rgba(147,173,162,1) 88%);
+
 }

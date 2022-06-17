@@ -1,6 +1,8 @@
 .app-title {
     color: rgb(215, 226, 221);
-    background-color: #5b6490;
+    background: rgb(71,75,94);
+background: linear-gradient(90deg, rgba(71,75,94,1) 0%, rgba(91,100,144,1) 52%, rgba(71,75,94,1) 93%);
+    
 }
 
 .site-title {

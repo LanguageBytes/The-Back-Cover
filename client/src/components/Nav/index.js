@@ -16,7 +16,7 @@ import { Text } from '@chakra-ui/react'
 import './Nav.css'
 function Nav() {
   const colors = useColorModeValue(
-    ['green.50', 'teal.50', 'blue.50','purple.50','pink.50','orange.50'],
+    ['green.100', 'teal.100', 'blue.100','purple.100','pink.100','orange.100'],
   )
   const [tabIndex, setTabIndex] = React.useState(0)
   const bg = colors[tabIndex]
@@ -91,8 +91,10 @@ function Nav() {
     <header>
       <Heading fontWeight='light' p='4' className="app-title">
         <Link  to="/">
-        <Text className="site-title" >The Back Cover &nbsp; 
-        <Icon className="app-title" as={GiRead} w={10} h={10} />
+
+        <Text >The Back Cover
+        <Icon  as={GiRead} w={10} h={10} />
+
         </Text>
         </Link>
       </Heading>
