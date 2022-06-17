@@ -30,7 +30,7 @@ background: linear-gradient(90deg, rgba(136,112,126,1) 0%, rgba(181,147,168,1) 5
     }
 }
 
-  @media screen and (max-width: 916px){
+  @media screen and (max-width: 1168px){
     .book-cover {
         height: 180px; 
         width: 153px 
@@ -44,7 +44,7 @@ background: linear-gradient(90deg, rgba(136,112,126,1) 0%, rgba(181,147,168,1) 5
 
 .book-button{
 background: rgb(50,61,113);
-background: linear-gradient(90deg, rgba(50,61,113,1) 0%, rgba(129,137,176,1) 52%, rgba(50,61,113,1) 100%);
+background: linear-gradient(90deg, #323d71 0%, #8189b0 52%, rgba(50,61,113,1) 100%);
 }
 
 .book-button,
@@ -104,7 +104,6 @@ background: linear-gradient(90deg, rgba(50,61,113,1) 0%, rgba(129,137,176,1) 52%
   }
 
   .book-container {
-    width: 600px;
     margin-left: 0px;
     margin-right: 0px;
   }

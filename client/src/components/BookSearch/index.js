@@ -6,7 +6,7 @@ import { Heading } from "@chakra-ui/react";
 import { Input } from "@chakra-ui/react";
 import { Button } from "@chakra-ui/react";
 import { Grid, GridItem } from "@chakra-ui/react";
-import { Box } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 import { Flex, Spacer } from "@chakra-ui/react";
 import { useMutation } from "@apollo/client";
 import { ADD_BOOK } from "../../utils/mutations";
@@ -52,17 +52,19 @@ function BookSearch() {
   }
   return (
     <div className="book-container">
-      <Heading
-        fontSize="30px "
-        p="4"
-        fontWeight="normal"
-        className="discovery-title"
+      <Text 
+        className="favourites-title"
+        bg='#323d71'
+        bgClip='text'
+        fontSize='6xl'
+        fontWeight='normal'
+        textAlign={'center'}
       >
         Discovery
-      </Heading>
+      </Text>
       <div>
       <Grid templateColumns='repeat(6, 1fr)' gap={2} className="grid-books">
-        <GridItem colSpan={{ base: "4", sm:"5", md: "6", lg: "3" }}>
+        <GridItem colSpan={{ base: "4", sm:"5", md: "6", lg: "2" }}>
           <FormControl
             p={{ base: "2", md: "4", lg: "4" }}
             my="4"
@@ -95,14 +97,14 @@ function BookSearch() {
             </form>
           </FormControl>
         </GridItem>
-        <GridItem colSpan={{ base:"4" ,sm: "5", md: "6", lg: "3" }} >
+        <GridItem colSpan={{ base:"4" ,sm: "5", md: "6", lg: "4"}} >
           <Grid
             templateColumns={{
               base: "repeat(2, 1fr)",
               sm:"repeat(3,1fr)",
               md: "repeat(4,1fr)",
               lg: "repeat(4,1fr)",
-              xl: "repeat(5,1fr)",
+              xl: "repeat(4,1fr)",
             }}
             gap={{base: "2",
                   sm:"3",
