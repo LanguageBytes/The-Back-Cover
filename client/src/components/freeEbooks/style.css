@@ -136,3 +136,10 @@ span {
 .favourites-title {
     margin: 2%;
 }
+
+.free-book{
+  box-shadow: 0 4px 8px 0 rgb(75, 80, 99), 0 6px 20px 0 rgb(75, 80, 99);
+  border-width: 6px;
+  border-style: solid;
+  border-color: rgb(90, 97, 129);
+}

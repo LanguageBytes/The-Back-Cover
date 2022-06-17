@@ -52,7 +52,6 @@ function EBooksSearch() {
       >
         Search Free E-books
       </Text>
-      {/* <div> */}
       <Grid templateColumns='repeat(6, 1fr)' gap={2} className="grid-books">
         <GridItem colSpan={{ base: "4", sm:"5", md: "6", lg: "2" }}>
           <FormControl

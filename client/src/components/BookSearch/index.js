@@ -190,7 +190,7 @@ function BookSearch() {
                      onClick={handleButtonClick}
                      data-bookcover={book.volumeInfo.imageLinks.thumbnail}
                   > 
-                  Favourite
+                  Favourite ♡ 
                   </button>
       </GridItem>  
             ))}
