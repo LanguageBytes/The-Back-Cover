@@ -106,7 +106,8 @@ function BookSearch() {
             }}
             gap={2}
           >
-            {result.map((book) => (
+            {result.filter((book)=>
+             typeof book.volumeInfo.imageLinks !== "undefined").map((book) => (
               <GridItem w="100%" colSpan={1}>
                 <img
                   className="book-cover"
