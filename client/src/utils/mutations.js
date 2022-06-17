@@ -31,19 +31,24 @@ export const ADD_USER = gql`
 `;
 
 
-export const ADD_BOOK = gql` 
-  mutation addBook(
-    $bookCover: String!
-    ) {
-      addBook (
-        bookCover: $bookCover 
-      ) {
-        bookCover
-        comments {
-          commentText
-          commentAuthor
-          createdAt
-        }
-      }
-   }
-`;
+export const ADD_BOOK = gql`
+ mutation
+ addBook ( $bookcover: String!) {
+ addBook ( bookcover: $bookcover ){
+  _id
+  bookcover
+  }
+ }
+ `;
+
+//  export const ADD_COMMENT = gql`
+//   mutation addComment($thoughtId: ID!, $commentText: String!) {
+//     addComment(thoughtId: $thoughtId, commentText: $commentText)  {
+//         _id
+//         commentText
+//         createdAt
+//       }
+//     }
+//   }
+// `;
+

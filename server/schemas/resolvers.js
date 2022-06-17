@@ -1,7 +1,6 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { User, Book } = require('../models');
 const { signToken } = require('../utils/auth');
-
 const resolvers = {
   Query: {
     users: async () => {
@@ -18,7 +17,6 @@ const resolvers = {
       return Book.findOne({ _id: bookId });
     },
   },
-
   Mutation: {
     addUser: async (parent, { userName, email, password }) => {
       const user = await User.create({ userName, email, password });
@@ -27,29 +25,22 @@ const resolvers = {
     },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
-
       if (!user) {
         throw new AuthenticationError('No user found with this email address');
       }
-
       const correctPw = await user.isCorrectPassword(password);
-
       if (!correctPw) {
         throw new AuthenticationError('Incorrect credentials');
       }
-
       const token = signToken(user);
-
       return { token, user };
     },
-    addBook: async (parent, { bookCover }) => {
-      const book = await Book.create({ bookCover });
-
+    addBook: async (parent, { bookcover }) => {
+      const book = await Book.create({ bookcover });
       await User.findOneAndUpdate(
-        { userName: bookCover },
+        { userName: bookcover },
         { $addToSet: { books: book._id } }
       );
-
       return book;
     },
     addComment: async (parent, { bookId, commentText, commentAuthor }) => {
@@ -76,5 +67,4 @@ const resolvers = {
     },
   },
 };
-
 module.exports = resolvers;
