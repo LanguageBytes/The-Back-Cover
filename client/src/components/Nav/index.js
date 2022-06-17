@@ -61,7 +61,7 @@ function Nav() {
           <div >
             {/* this is not using the Link component to logout or user and then refresh the application to the start */}
             <a href="/" onClick={() => Auth.logout()}>
-              Logout
+              Log out
             </a>
           </div>
           </Tab>
@@ -74,12 +74,12 @@ function Nav() {
           <TabList>
           <Tab fontSize={{ base: '22px', md: '22px', lg: '28px' }} color='#48BB78'>
             <Link to="/signup">
-              Signup
+              Sign up
             </Link>
             </Tab>
             <Tab fontSize={{ base: '22px', md: '22px', lg: '28px' }} color='#38B2AC'>
             <Link to="/login">
-              Login
+              Log in
             </Link>
             </Tab>
           </TabList>
@@ -91,8 +91,10 @@ function Nav() {
     <header>
       <Heading fontWeight='light' p='4' className="app-title">
         <Link  to="/">
+
         <Text >The Back Cover
         <Icon  as={GiRead} w={10} h={10} />
+
         </Text>
         </Link>
       </Heading>

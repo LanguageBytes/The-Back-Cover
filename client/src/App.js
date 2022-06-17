@@ -14,6 +14,7 @@ import MyBooks from './pages/MyBooks';
 import Nav from './components/Nav/index';
 import Footer from './components/Footer/index'
 import { Box } from '@chakra-ui/react'
+import Description from "./pages/Description";
 
 // Google Books API calls
 // const getBooksByAuthor = 'https://www.googleapis.com/books/v1/volumes?q=prideandprejudice+intitle&key=AIzaSyDgmjmghFQvvxLztdDeOKE0eqkG_HgdV84
@@ -76,6 +77,10 @@ function App() {
                  <Route 
                 path="/contact" 
                 element={<Contact />} 
+              />
+                  <Route 
+                path="/Description" 
+                element={<Description />} 
               />
               {/* <Route 
                 path="/success" 

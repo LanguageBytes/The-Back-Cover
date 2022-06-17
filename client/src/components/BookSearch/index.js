@@ -13,12 +13,30 @@ import { ADD_BOOK } from "../../utils/mutations";
 import { Image } from "@chakra-ui/react";
 import { BsSuitHeart } from "react-icons/bs";
 import { Icon } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+import { RiUserLocationLine } from "react-icons/ri";
+
+
 function BookSearch() {
   const [book, setBook] = useState("");
   const [addBook] = useMutation(ADD_BOOK);
   const [result, setResult] = useState([]);
   const [apiKey] = useState("AIzaSyDgmjmghFQvvxLztdDeOKE0eqkG_HgdV84");
+
+  // This will listen for a button click, first it will set the description in localStorage then relocate
+  // The data can then be used on a different page
+ function handleDescription(event) {
+  event.preventDefault(); {
+    const Description = event.target.getAttribute("data-value")
+    console.log(event.target.getAttribute("data-value"))
+    localStorage.setItem('Description', Description);
+      console.log(event.target.getAttribute("data-value"))
+      window.location.href = "/Description";
+    }; 
+}
+
   // For the Favourite Button
+  // Will take the data from that button and save it to our database
   const handleButtonClick = async (event) => {
     event.preventDefault();
     console.log(event.target.dataset);
@@ -30,9 +48,13 @@ function BookSearch() {
       console.error(err);
     }
   };
+
   // For the API call
+  // Will take the user input to then render tailored results to the page
+
   function changeHandler(event) {
     const book = event.target.value;
+    console.log(event.target.value)
     setBook(book);
   }
   function submitHandler(event) {
@@ -50,6 +72,7 @@ function BookSearch() {
         setResult(data.data.items);
       });
   }
+  
   return (
     <div className="book-container">
       <Text 
@@ -96,6 +119,7 @@ function BookSearch() {
               </button>
             </form>
           </FormControl>
+
         </GridItem>
         <GridItem colSpan={{ base:"4" ,sm: "5", md: "6", lg: "4"}} >
           <Grid
@@ -120,6 +144,16 @@ function BookSearch() {
                   src={book.volumeInfo.imageLinks.thumbnail}
                   alt={book.title}
                 />
+
+                <GridItem w="100%" colSpan={2}>
+                  <br/>
+                  <h1 className="title">{book.volumeInfo.title}</h1>
+                  <br/>
+                  <div>
+                  
+                  <button data-value={book.volumeInfo.description} onClick={handleDescription} value={book.volumeInfo.description}> Read More </button> 
+                  
+                  </div>
                   <button
                      className = "book-button"
                      id="favourite"
@@ -131,6 +165,7 @@ function BookSearch() {
                   </button>
               </GridItem>
             ))}
+
           </Grid>
         </GridItem>
       </Grid>

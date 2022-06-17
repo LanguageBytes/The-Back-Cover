@@ -5,3 +5,7 @@ background: linear-gradient(90deg, rgba(71,75,94,1) 0%, rgba(91,100,144,1) 52%, 
     
 }
 
+.site-title {
+    font-style: italic;
+    font-size: 40px;
+}
