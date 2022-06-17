@@ -3,13 +3,10 @@
 }
 
 .discovery-form-background {
- background-color:  rgb(169, 136, 156);
+    background: rgb(136,112,126);
+background: linear-gradient(90deg, rgba(136,112,126,1) 0%, rgba(181,147,168,1) 52%, rgba(136,112,126,1) 100%);
 }
 
-.discovery-button {
-background-color:rgba(253,233,223,1);
-color:#5b6490 ;
-}
 
 
 
@@ -45,15 +42,15 @@ color:#5b6490 ;
 }
 
 
+.book-button{
+background: rgb(50,61,113);
+background: linear-gradient(90deg, rgba(50,61,113,1) 0%, rgba(129,137,176,1) 52%, rgba(50,61,113,1) 100%);
+}
 
-
-
-
-.book-button {
+.book-button,
+.discovery-button  {
     display: inline-block;
     border-radius: 4px;
-    background: rgb(50,61,113);
-background: linear-gradient(90deg, rgba(50,61,113,1) 0%, rgba(129,137,176,1) 52%, rgba(50,61,113,1) 100%);
     border: none;
     color: #FFFFFF;
     text-align: center;
@@ -64,7 +61,8 @@ background: linear-gradient(90deg, rgba(50,61,113,1) 0%, rgba(129,137,176,1) 52%
     margin: 1px;
   }
   
-  .book-button span {
+  .book-button span,
+  .discovery-button span {
     cursor: pointer;
     display: inline-block;
     position: relative;
@@ -79,12 +77,28 @@ background: linear-gradient(90deg, rgba(50,61,113,1) 0%, rgba(129,137,176,1) 52%
     right: -20px;
     transition: 0.5s;
   }
+
+  .discovery-button span:after {
+    content: '🔍';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
   
-  .book-button:hover span {
+.discovery-button:hover {
+    color: #b4bad6;
+    transition: 0s;
+}
+
+  .book-button:hover span,
+  .discovery-button:hover span{
     padding-right: 25px;
   }
   
-  .book-button:hover span:after {
+  .book-button:hover span:after ,
+  .discovery-button:hover span:after{
     opacity: 1;
     right: 0;
   }

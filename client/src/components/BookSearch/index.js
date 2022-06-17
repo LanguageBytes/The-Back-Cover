@@ -85,15 +85,13 @@ function BookSearch() {
                 placeholder="Enter a book name"
                 autoComplete="off"
               ></Input>
-              <Button
-                variant="solid"
-                mt="4"
+              <button
                 className="discovery-button"
                 type="submit"
               >
                 {" "}
-                Search
-              </Button>
+               <span>Search</span>
+              </button>
             </form>
           </FormControl>
         </GridItem>
