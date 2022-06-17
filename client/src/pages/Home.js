@@ -7,6 +7,7 @@ const Home = () => {
     return (
       <div>
         <BookSearch />
+        <p>hello</p>
       </div>
     );
   };

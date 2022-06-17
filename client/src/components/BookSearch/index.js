@@ -55,7 +55,7 @@ function BookSearch() {
 
 
     // Once this data is saved in storage to be retrieved, relocate the user to the Description page
-      window.location.href = "/Description";
+      window.location.href = "/description";
     }; 
 }
 
