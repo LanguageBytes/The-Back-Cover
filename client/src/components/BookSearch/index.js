@@ -144,8 +144,6 @@ function BookSearch() {
                   src={book.volumeInfo.imageLinks.thumbnail}
                   alt={book.title}
                 />
-
-                <GridItem w="100%" colSpan={2}>
                   <br/>
                   <h1 className="title">{book.volumeInfo.title}</h1>
                   <br/>
@@ -165,7 +163,6 @@ function BookSearch() {
                   </button>
               </GridItem>
             ))}
-
           </Grid>
         </GridItem>
       </Grid>
