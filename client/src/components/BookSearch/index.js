@@ -61,10 +61,10 @@ function BookSearch() {
         Discovery
       </Heading>
       <div>
-      <Grid h="200px" templateColumns="repeat(8, 1fr)" gap={2} className="grid-books">
-        <GridItem colSpan={{ base: "8", md: "8", lg: "4" }}>
+      <Grid templateColumns='repeat(6, 1fr)' gap={2} className="grid-books">
+        <GridItem colSpan={{ base: "4", sm:"5", md: "6", lg: "3" }}>
           <FormControl
-            p={{ base: "4", md: "4", lg: "10" }}
+            p={{ base: "2", md: "4", lg: "4" }}
             my="4"
             boxShadow="dark-lg"
             className="discovery-form-background"
@@ -97,19 +97,24 @@ function BookSearch() {
             </form>
           </FormControl>
         </GridItem>
-        <GridItem colSpan={{ base: "8", md: "8", lg: "4" }} >
+        <GridItem colSpan={{ base:"4" ,sm: "5", md: "6", lg: "3" }} >
           <Grid
             templateColumns={{
-              base: "repeat(5, 1fr)",
-              md: "repeat(5,1fr)",
+              base: "repeat(2, 1fr)",
+              sm:"repeat(3,1fr)",
+              md: "repeat(4,1fr)",
               lg: "repeat(4,1fr)",
               xl: "repeat(5,1fr)",
             }}
-            gap={2}
+            gap={{base: "2",
+                  sm:"3",
+                  md: "4",
+                 lg: "5",
+                  xl: "5",}}
           >
             {result.filter((book)=>
              typeof book.volumeInfo.imageLinks !== "undefined").map((book) => (
-              <GridItem w="100%" colSpan={1}>
+              <GridItem className="search-grid" w="100%" colSpan={1}>
                 <img
                   className="book-cover"
                   src={book.volumeInfo.imageLinks.thumbnail}
@@ -121,7 +126,8 @@ function BookSearch() {
                      onClick={handleButtonClick}
                      data-bookcover={book.volumeInfo.imageLinks.thumbnail}
                   > 
-                  <span>Favourite</span> 
+                  <span>Favourite 
+                  </span> 
                   </button>
               </GridItem>
             ))}
