@@ -18,8 +18,8 @@ import {
     return (
         <div className="footer">
       <Text className="footer-text" heigh='100%' p={2} fontSize='30px' textAlign={'center'}>
-        The Digital Back Cover Of Every Book
-        <Icon color='#48BB78' as={GiBookCover} w={10} h={10} />
+        The Digital Back Cover of Every Book &nbsp; 
+        <Icon color='#48BB78' as={GiBookCover} w={10} h={7} />
       </Text>
         </div>
     );
