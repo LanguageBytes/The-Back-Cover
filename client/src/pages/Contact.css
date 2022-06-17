@@ -5,3 +5,15 @@
 .contact-title {
     color:rgb(215, 226, 221)
 }
+
+.sarah-icon:hover {
+    color: rgb(187, 162, 121);
+}
+
+.lisa-icon:hover {
+    color: rgb(187, 121, 132);
+}
+
+.samira-icon:hover {
+    color: rgb(121, 169, 187);
+}

@@ -24,7 +24,7 @@ const Contact = () => {
         fontWeight='normal'
         textAlign={'center'}>
         Contact Us</Heading>
-      <Container mt='4' p={{ base: '0', md: '4', lg: '8' }} boxShadow='dark-lg' className="contact-container">
+      <div className="contact-container">
     <Hide above='lg'>
       <Center bg='orange.100' >
            <Grid templateColumns='repeat(4, 1fr)' gap={6}>
@@ -40,17 +40,17 @@ const Contact = () => {
                </Hide>
                <GridItem w='100%' p='6'  mt='2' >
                 <a href="https://github.com/LanguageBytes">
-                <Icon color='orange.500' as={FiGithub} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                <Icon className="sarah-icon" color='orange.500' as={FiGithub} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
                 </a>
                </GridItem>
                <GridItem w='100%' p='6' mt='2' >
                 <a href="https://www.linkedin.com/in/sarah-lloyd-19673b135/">
-                <Icon color='orange.500' as={FiLinkedin} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                <Icon className="sarah-icon" color='orange.500' as={FiLinkedin} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
                 </a>
                </GridItem>
                <GridItem w='100%' p='6' mt='2'>
                 <a href="mailto:sarahlloyd407a@gmail.com">
-                <Icon color='orange.500' as={FiMail} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                <Icon className="sarah-icon" color='orange.500' as={FiMail} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
                 </a>
                </GridItem>
            </Grid>
@@ -60,24 +60,24 @@ const Contact = () => {
         <Center bg='orange.100' p='4'>
            <Grid templateColumns='repeat(5, 1fr)' gap={0}>
                 <GridItem  p='6' mt='2'>
-                <Text  color='orange.500' fontSize='24px'>Sarah</Text>
+                <Text  color='orange.500' fontSize={{lg:'24px',xl:'28px'}}>Sarah</Text>
                </GridItem> 
               <GridItem p='4'>
-              <Avatar size='xl' name='Sarah' src={sarah} />
+              <Avatar  size={{lg:'xl',xl:'2xl'}} name='Sarah' src={sarah} />
                </GridItem> 
                <GridItem  p='6'  mt='2' >
                 <a href="https://github.com/LanguageBytes">
-                <Icon color='orange.500' as={FiGithub} w='16'  h= '16' />
+                <Icon className="sarah-icon" color='orange.500' as={FiGithub} w='16'  h= '16' />
                 </a>
                </GridItem>
                <GridItem p='6' mt='2' >
                 <a href="https://www.linkedin.com/in/sarah-lloyd-19673b135/">
-                <Icon color='orange.500' as={FiLinkedin} w='16' h='16'/>
+                <Icon className="sarah-icon" color='orange.500' as={FiLinkedin} w='16' h='16'/>
                 </a>
                </GridItem>
                <GridItem  p='6' mt='2'>
                 <a href="mailto:sarahlloyd407a@gmail.com">
-                <Icon color='orange.500' as={FiMail} w= '16' h='16'/>
+                <Icon className="sarah-icon" color='orange.500' as={FiMail} w= '16' h='16'/>
                 </a>
                </GridItem>
            </Grid>
@@ -98,17 +98,17 @@ const Contact = () => {
             </Hide>
                <GridItem  p='6' mt='2'  >
                 <a href="https://github.com/LisaCR01">
-                <Icon color='red.500'  as={FiGithub} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                <Icon className="lisa-icon" color='red.500'  as={FiGithub} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
                 </a>
                </GridItem>
                <GridItem w='100%' p='6' mt='2' >
                 <a href="https://www.linkedin.com/in/LisaCR01">
-                <Icon color='red.500' as={FiLinkedin} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                <Icon className="lisa-icon" color='red.500' as={FiLinkedin} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
                 </a>
                </GridItem>
                <GridItem w='100%' p='6' mt='2'>
                 <a href="mailto:lcrgunn@gmail.com">
-                <Icon color='red.500' as={FiMail} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                <Icon className="lisa-icon" color='red.500' as={FiMail} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
                 </a>
                </GridItem>
            </Grid>
@@ -116,24 +116,24 @@ const Contact = () => {
            <Hide below='lg'>
             <Grid templateColumns='repeat(5, 1fr)' gap={0}>
                 <GridItem w='100%' p='6' mt='2'>
-                <Text px='3' color='red.500' fontSize='24px'>Lisa</Text>
+                <Text px='3' color='red.500' fontSize={{lg:'24px',xl:'28px'}}>Lisa</Text>
                </GridItem> 
               <GridItem w='100%' p='4'>
-              <Avatar size='xl' name='Lisa' src={lisa} />
+              <Avatar size={{lg:'xl',xl:'2xl'}} name='Lisa' src={lisa} />
                </GridItem> 
                <GridItem w='100%' p='6' mt='2'  >
                 <a href="https://github.com/LisaCR01">
-                <Icon color='red.500'  as={FiGithub} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                <Icon className="lisa-icon" color='red.500'  as={FiGithub} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
                 </a>
                </GridItem>
                <GridItem w='100%' p='6' mt='2' >
                 <a href="https://www.linkedin.com/in/LisaCR01">
-                <Icon color='red.500' as={FiLinkedin} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                <Icon className="lisa-icon" color='red.500' as={FiLinkedin} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
                 </a>
                </GridItem>
                <GridItem w='100%' p='6' mt='2'>
                 <a href="mailto:lcrgunn@gmail.com">
-                <Icon color='red.500' as={FiMail} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                <Icon className="lisa-icon" color='red.500' as={FiMail} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
                 </a>
                </GridItem>
            </Grid>
@@ -154,17 +154,17 @@ const Contact = () => {
                </Hide>
                <GridItem w='100%' p='6' mt='2'>
                 <a href="https://github.com/samira0101">
-                <Icon color='blue.500' as={FiGithub} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                <Icon className="samira-icon" color='blue.500' as={FiGithub} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
                 </a>
                </GridItem>
                <GridItem w='100%' p='6' mt='2'>
                 <a href="https:www.linkedin.com/in/samira-hirsi-4609131a8">
-                <Icon color='blue.500' as={FiLinkedin} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                <Icon className="samira-icon" color='blue.500' as={FiLinkedin} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
                 </a>
                </GridItem>
                <GridItem w='100%' p='6' mt='2'>
                 <a  href="mailto:samira-h@hotmail.co.uk">
-                <Icon color='blue.500' as={FiMail} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                <Icon className="samira-icon" color='blue.500' as={FiMail} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
                 </a>
                </GridItem>
            </Grid>
@@ -172,30 +172,30 @@ const Contact = () => {
         <Hide  below='lg'>
         <Grid templateColumns='repeat(5, 1fr)' gap={0}>
              <GridItem  w='100%' p='6' mt='2'>
-                <Text color='blue.500' fontSize='24px'>Samira</Text>
+                <Text color='blue.500' fontSize={{lg:'24px',xl:'28px'}}>Samira</Text>
                </GridItem>
               <GridItem w='100%' p='4'>
-              <Avatar size='xl' name='Samira' src={samira} />
+              <Avatar size={{lg:'xl',xl:'2xl'}} name='Samira' src={samira} />
                </GridItem>  
                <GridItem w='100%' p='6' mt='2'>
                 <a href="https://github.com/samira0101">
-                <Icon color='blue.500' as={FiGithub} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                <Icon className="samira-icon" color='blue.500' as={FiGithub} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
                 </a>
                </GridItem>
                <GridItem w='100%' p='6' mt='2'>
                 <a href="https:www.linkedin.com/in/samira-hirsi-4609131a8">
-                <Icon color='blue.500' as={FiLinkedin} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                <Icon className="samira-icon" color='blue.500' as={FiLinkedin} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
                 </a>
                </GridItem>
                <GridItem w='100%' p='6' mt='2'>
                 <a  href="mailto:samira-h@hotmail.co.uk">
-                <Icon color='blue.500' as={FiMail} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
+                <Icon className="samira-icon" color='blue.500' as={FiMail} w={{ base: '8', md: '12', lg: '16' }} h={{ base: '8', md: '12', lg: '16' }} />
                 </a>
                </GridItem>
            </Grid>
         </Hide>
        </Center>
-       </Container>
+       </div>
        </div>
     );
   };
