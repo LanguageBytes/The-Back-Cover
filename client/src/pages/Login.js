@@ -43,11 +43,11 @@ function Login(props) {
   return (
     <Container>
       <Link className='go-back-signup' fontWeight='normal' to="/signup">
-        <Text fontSize='25px' p='4'>← Go to Signup</Text>
+        <Text fontSize='25px' p='4'>← Go to Sign up</Text>
         </Link>
         <Center boxShadow='dark-lg' className="form-background-login" p='4' my='4'>
         <FormControl p='3'>
-          <Heading fontWeight="light" className="form-heading" py='2' fontSize='30px'>Log In</Heading>
+          <Heading fontWeight="light" className="form-heading" py='2' fontSize='30px'>Log in</Heading>
       <form onSubmit={handleFormSubmit}>
         <div>
           <FormLabel color='white' htmlFor="email">Email address:</FormLabel>

@@ -1,12 +1,15 @@
 .landing-title {
-    color: rgb(148, 103, 103);
+    color: rgb(59, 23, 97);
+    text-align: center;
 }
 
 .form-background-landing {
-    background-color: rgb(147, 124, 124) ;
+    background-color: rgb(102, 81, 151) ;
 }
 
 .landing-text {
-    color:rgb(109, 83, 83); 
-    background-color:  rgb(235, 217, 217);
+    color:rgb(105, 57, 208); 
+    background-color:  rgb(255, 255, 255);
+    text-align: center;
 }
+
