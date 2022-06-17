@@ -57,7 +57,10 @@ THEN  I am able to view the posts of other users.
 
 ## Future Developments
 
-Reference
+- The main future development we want to implement is being able to add an interactive section between our users. This would include them being able to see each other's favourite books and also the ability to post reviews on books; to give it more of a community feeling.
+- An additional improvement we want to add to our site is being able to categorise the books that the user is looking through so that if they have a genre of particular interest they are able to explore more books in that area and thus the site is more catered towards them.
+- Along with catering to our user’s predefined interests we also want to give them inspiration on new books they should try,  we would do this through using a trusted website to show top pick books.
+- The last development we want to build on is making our favourite books page more interactive by allowing the user to delete favouritise books.
 
 
 ## Application
