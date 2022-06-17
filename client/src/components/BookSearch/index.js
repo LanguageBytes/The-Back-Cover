@@ -53,6 +53,13 @@ function BookSearch() {
     localStorage.setItem('Published', Published);
       console.log(event.target.getAttribute("data-published"))
 
+      // Link
+      const Link = event.target.getAttribute("data-link")
+      console.log(event.target.getAttribute("data-link"))
+      localStorage.setItem('Link', Link);
+        console.log(event.target.getAttribute("data-link"))
+  
+
 
     // Once this data is saved in storage to be retrieved, relocate the user to the Description page
       window.location.href = "/description";
@@ -103,7 +110,7 @@ function BookSearch() {
         className="favourites-title"
         bg='#323d71'
         bgClip='text'
-        fontSize='6xl'
+        fontSize='4xl'
         fontWeight='normal'
         textAlign={'center'}
       >
@@ -175,6 +182,7 @@ function BookSearch() {
                   data-author={book.volumeInfo.authors}
                   data-image={book.volumeInfo.imageLinks.thumbnail}
                   data-published={book.volumeInfo.publishedDate}
+                  data-link={book.volumeInfo.infoLink}
                   onClick={handleDescription} value={book.volumeInfo.description}> Read More </button> 
                   <button
                      className = "book-button"

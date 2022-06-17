@@ -6,6 +6,7 @@ const author = localStorage.getItem('Author')
 const description = localStorage.getItem('Description');
 const Image = localStorage.getItem('Image')
 const Published = localStorage.getItem('Published')
+const Link = localStorage.getItem('Link')
 
 const Description= () => {
 
@@ -18,7 +19,9 @@ const Description= () => {
       <div>
       <p className="description">{description}</p>
       <p className="published">Date published: {Published}</p>
+      <a href={Link}>
       <button className="link"> Get this Book </button>
+      </a>
       </div>
       </div>
 

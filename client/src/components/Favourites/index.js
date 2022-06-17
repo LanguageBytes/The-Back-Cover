@@ -6,20 +6,24 @@ import {Text} from '@chakra-ui/react'
 
 const Favourites = ({books}) => {
   if (!books.length) {
-    return <h3>No books Yet</h3>;
+    return <h3>No books yet </h3>;
   }
   return (
     <div>
+        <br/>
         <Text
         className="favourites-title"
         bg='#323d71'
+        font-size="10px"
         bgClip='text'
         fontSize='6xl'
         fontWeight='normal'
         textAlign={'center'}
       >
-        My books
+        Saved Books
       </Text>
+
+      <br/>
       <Grid templateColumns={{
         base: "repeat(2, 1fr)",
         sm:"repeat(3,1fr)",
