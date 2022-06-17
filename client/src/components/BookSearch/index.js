@@ -51,7 +51,7 @@ function BookSearch() {
       });
   }
   return (
-    <Box py={{ base: "0", md: "4", lg: "6" }}>
+    <div className="book-container">
       <Heading
         fontSize="30px "
         p="4"
@@ -60,8 +60,9 @@ function BookSearch() {
       >
         Discovery
       </Heading>
-      <Grid h="200px" templateColumns="repeat(8, 1fr)" gap={6}>
-        <GridItem colSpan={{ base: "8", md: "8", lg: "5" }}>
+      <div>
+      <Grid h="200px" templateColumns="repeat(8, 1fr)" gap={2} className="grid-books">
+        <GridItem colSpan={{ base: "8", md: "8", lg: "4" }}>
           <FormControl
             p={{ base: "4", md: "4", lg: "10" }}
             my="4"
@@ -96,7 +97,7 @@ function BookSearch() {
             </form>
           </FormControl>
         </GridItem>
-        <GridItem colSpan={{ base: "8", md: "8", lg: "3" }}>
+        <GridItem colSpan={{ base: "8", md: "8", lg: "4" }} >
           <Grid
             templateColumns={{
               base: "repeat(5, 1fr)",
@@ -115,16 +116,20 @@ function BookSearch() {
                   alt={book.title}
                 />
                   <button
+                     className = "book-button"
                      id="favourite"
                      onClick={handleButtonClick}
                      data-bookcover={book.volumeInfo.imageLinks.thumbnail}
-                  > Favourite </button>
+                  > 
+                  <span>Favourite</span> 
+                  </button>
               </GridItem>
             ))}
           </Grid>
         </GridItem>
       </Grid>
-    </Box>
+</div>
+    </div>
   )};
 
  export default BookSearch

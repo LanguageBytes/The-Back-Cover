@@ -15,3 +15,59 @@ color:#5b6490 ;
 .book-cover {
     height: 150px;
 }
+
+
+
+
+.book-button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 22px;
+    padding: 3px;
+    width: 120px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 1px;
+  }
+  
+  .book-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .book-button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .book-button:hover span {
+    padding-right: 25px;
+  }
+  
+  .book-button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .book-container {
+    width: 600px;
+    margin-left: 0px;
+    margin-right: 0px;
+
+  }
+
+  .grid-books {
+    display: block;
+    margin-left: 10px;
+    margin-right: auto
+  }
