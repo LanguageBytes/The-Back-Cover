@@ -9,8 +9,6 @@ background: linear-gradient(90deg, rgba(136,112,126,1) 0%, rgba(181,147,168,1) 5
 
 
 
-
-
 @media screen and (min-width: 1351px){
     .book-cover {
         height: 220px;
@@ -44,12 +42,16 @@ background: linear-gradient(90deg, rgba(136,112,126,1) 0%, rgba(181,147,168,1) 5
 
 .book-button{
 background: rgb(50,61,113);
-background: linear-gradient(90deg, #323d71 0%, #8189b0 52%, #323d71 100%);
+background: linear-gradient(90deg, #93a1e3 0%, #8189b0 52%, #0cb09f 100%);
 }
 
 .info-button  {
     background: rgb(76,91,164);
-background: linear-gradient(90deg, rgba(76,91,164,1) 0%, rgba(185,190,215,1) 52%, rgba(85,99,164,1) 88%);
+background: linear-gradient(90deg, rgb(67, 216, 146) 0%, rgba(185,190,215,1) 52%, rgb(222, 188, 238) 88%);
+}
+
+span {
+    color:rgb(204, 249, 249);
 }
 
 .book-button,
@@ -131,3 +133,6 @@ background: linear-gradient(90deg, rgba(76,91,164,1) 0%, rgba(185,190,215,1) 52%
     border-radius: 5px;
 }
 
+.favourites-title {
+    margin: 2%;
+}

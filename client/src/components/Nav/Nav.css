@@ -1,7 +1,7 @@
 .app-title {
     color: rgb(215, 226, 221);
-    background: rgb(71,75,94);
-background: linear-gradient(90deg, rgba(71,75,94,1) 0%, rgba(91,100,144,1) 52%, rgba(71,75,94,1) 93%);
+    background: rgb(58, 54, 77);
+background: linear-gradient(90deg, rgb(65, 50, 108) 0%, rgba(91,100,144,1) 52%, rgba(71,75,94,1) 93%);
     
 }
 
