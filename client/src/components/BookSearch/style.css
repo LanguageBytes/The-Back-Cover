@@ -16,7 +16,7 @@ background: linear-gradient(90deg, rgba(136,112,126,1) 0%, rgba(181,147,168,1) 5
         height: 220px;
         width: 187px    
   }
-  .book-button {
+  .book-button,.info-button {
     width: 187px
 }
 }
@@ -25,7 +25,7 @@ background: linear-gradient(90deg, rgba(136,112,126,1) 0%, rgba(181,147,168,1) 5
         height: 200px;
         width: 170px    
   }
-    .book-button {
+    .book-button,.info-button {
         width: 170px
     }
 }
@@ -35,7 +35,7 @@ background: linear-gradient(90deg, rgba(136,112,126,1) 0%, rgba(181,147,168,1) 5
         height: 180px; 
         width: 153px 
   }
-    .book-button {
+    .book-button,.info-button {
         width: 153px;
     }
 
@@ -44,15 +44,20 @@ background: linear-gradient(90deg, rgba(136,112,126,1) 0%, rgba(181,147,168,1) 5
 
 .book-button{
 background: rgb(50,61,113);
-background: linear-gradient(90deg, #323d71 0%, #8189b0 52%, rgba(50,61,113,1) 100%);
+background: linear-gradient(90deg, #323d71 0%, #8189b0 52%, #323d71 100%);
+}
+
+.info-button  {
+    background: rgb(76,91,164);
+background: linear-gradient(90deg, rgba(76,91,164,1) 0%, rgba(185,190,215,1) 52%, rgba(85,99,164,1) 88%);
 }
 
 .book-button,
-.discovery-button  {
+.discovery-button,
+.info-button  {
     display: inline-block;
     border-radius: 4px;
     border: none;
-    color: #FFFFFF;
     text-align: center;
     font-size: 22px;
     padding: 3px;
@@ -60,8 +65,20 @@ background: linear-gradient(90deg, #323d71 0%, #8189b0 52%, rgba(50,61,113,1) 10
     cursor: pointer;
     margin: 1px;
   }
+
+  .book-button{
+    color: #FFFFFF;
+  }
+
+  .discovery-button {
+    color:#323d71;
+  }
+
+  .info-button {
+    color: #323d71;
+  }
+
   
-  .book-button span,
   .discovery-button span {
     cursor: pointer;
     display: inline-block;
@@ -69,14 +86,6 @@ background: linear-gradient(90deg, #323d71 0%, #8189b0 52%, rgba(50,61,113,1) 10
     transition: 0.5s;
   }
   
-  .book-button span:after {
-    content: '♡';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
 
   .discovery-button span:after {
     content: '🔍';
@@ -92,14 +101,17 @@ background: linear-gradient(90deg, #323d71 0%, #8189b0 52%, rgba(50,61,113,1) 10
     transition: 0s;
 }
 
-  .book-button:hover span,
   .discovery-button:hover span{
     padding-right: 25px;
   }
   
-  .book-button:hover span:after ,
   .discovery-button:hover span:after{
     opacity: 1;
+    right: 0;
+  }
+
+  .book-button:hover,.info-button:hover {
+    opacity: 0.7;
     right: 0;
   }
 

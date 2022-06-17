@@ -1,20 +1,14 @@
 import React, { useState } from "react";
 import "./style.css";
 import axios from "axios";
-import { Center, Container, FormControl } from "@chakra-ui/react";
+import { FormControl } from "@chakra-ui/react";
 import { Heading } from "@chakra-ui/react";
 import { Input } from "@chakra-ui/react";
-import { Button } from "@chakra-ui/react";
 import { Grid, GridItem } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
-import { Flex, Spacer } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { useMutation } from "@apollo/client";
 import { ADD_BOOK } from "../../utils/mutations";
-import { Image } from "@chakra-ui/react";
-import { BsSuitHeart } from "react-icons/bs";
-import { Icon } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
-import { RiUserLocationLine } from "react-icons/ri";
 
 
 function BookSearch() {
@@ -104,7 +98,7 @@ function BookSearch() {
   }
 
   return (
-    <div className="book-container">
+    <Box className="book-container">
       <Text 
         className="favourites-title"
         bg='#323d71'
@@ -115,7 +109,7 @@ function BookSearch() {
       >
         Discovery
       </Text>
-      <div>
+      {/* <div> */}
       <Grid templateColumns='repeat(6, 1fr)' gap={2} className="grid-books">
         <GridItem colSpan={{ base: "4", sm:"5", md: "6", lg: "2" }}>
           <FormControl
@@ -152,7 +146,7 @@ function BookSearch() {
 
         </GridItem>
         <GridItem colSpan={{ base:"4" ,sm: "5", md: "6", lg: "4"}} >
-          <Grid
+           <Grid
             templateColumns={{
               base: "repeat(2, 1fr)",
               sm:"repeat(3,1fr)",
@@ -164,45 +158,38 @@ function BookSearch() {
                   sm:"3",
                   md: "4",
                  lg: "5",
-                  xl: "5",}}
+                  xl: "5",}} 
           >
             {result.filter((book)=>
              typeof book.volumeInfo.imageLinks !== "undefined").map((book) => (
-              <GridItem className="search-grid" w="100%" colSpan={1}>
+            <GridItem className="search-grid" w="100%" colSpan={1}>
                 <img
                   className="book-cover"
                   src={book.volumeInfo.imageLinks.thumbnail}
                   alt={book.title}
                 />
-                  <br/>
-                  <h1 className="title">{book.volumeInfo.title}</h1>
-                  <br/>
-                  <div>
-                  
                   <button 
+                  className="info-button"
                   data-desc={book.volumeInfo.description}
                   data-heading={book.volumeInfo.title}
                   data-author={book.volumeInfo.authors}
                   data-image={book.volumeInfo.imageLinks.thumbnail}
                   data-published={book.volumeInfo.publishedDate}
                   onClick={handleDescription} value={book.volumeInfo.description}> Read More </button> 
-                  </div>
                   <button
                      className = "book-button"
                      id="favourite"
                      onClick={handleButtonClick}
                      data-bookcover={book.volumeInfo.imageLinks.thumbnail}
                   > 
-                  <span>Favourite 
-                  </span> 
+                  Favourite
                   </button>
-              </GridItem>
+      </GridItem>  
             ))}
-          </Grid>
+           </Grid> 
         </GridItem>
       </Grid>
-</div>
-    </div>
+    </Box>
   )};
 
  export default BookSearch
