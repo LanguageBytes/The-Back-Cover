@@ -65,6 +65,15 @@ THEN  I am able to view the posts of other users.
 
 ## Application
 
+### Screenshot of Sign Up
+![Screenshot of Sign Up](./assets/signup-page.jpeg?raw=true)
+### Screenshot of Landing Page
+![Screenshot of Landing Page](./assets/landing-page.jpeg?raw=true)
+### Screenshot of Discover Page
+![Screenshot of Discover Page](./assets/discover-page.jpeg?raw=true)
+### Screenshot of Favourite Books
+![Screenshot of  Favourite Books](./assets/favourite-page.jpeg?raw=true)
+
 ### Deployed Application
 [Link to Deployed Application](https://murmuring-fjord-69786.herokuapp.com)
 
