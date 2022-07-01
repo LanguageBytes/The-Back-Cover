@@ -66,7 +66,7 @@ THEN  I am able to view the posts of other users.
 ## Application
 
 ### Screenshot of Sign Up
-![Screenshot of Sign Up](./assets/signup-page.jpeg?raw=true)
+![Screenshot of Sign Up](./assets/signup-page.jpg?raw=true)
 ### Screenshot of Landing Page
 ![Screenshot of Landing Page](./assets/landing-page.jpeg?raw=true)
 ### Screenshot of Discover Page
