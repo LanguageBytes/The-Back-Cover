@@ -66,9 +66,10 @@ THEN  I am able to view the posts of other users.
 ## Application
 
 ### Deployed Application
+[Link to Deployed Application](https://murmuring-fjord-69786.herokuapp.com)
 
 ### Github Repository
-
+[Link to Github Repository](https://github.com/LanguageBytes/The-Back-Cover.git)
 
 ## Contact Information
 
